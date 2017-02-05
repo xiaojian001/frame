@@ -1,0 +1,810 @@
+<extend name="Public/base"/>
+<block name="body">
+    <div class="fixed-bar" id="User_Bar">
+        <div class="item-title">
+            <h3>订单</h3>
+            <ul class="tab-base">
+                <li><a class="current" href="JavaScript:void(0);"
+                       onclick="Data_Reload('User_Data_List');"><span>列表</span></a></li>
+                <li><a href="JavaScript:void(0);"
+                       onclick="Data_Search('User_Search_From','User_Data_List');"><span>搜索</span></a></li>
+                <li>
+                    <a href="JavaScript:void(0);"
+                       onclick="Add_Order('Add_Order_Data_Form','User_Data_List','Admin/Order/add');"><span>添加</span></a>
+                </li>
+                <li>
+                    <a href="JavaScript:void(0);"
+                       onclick="Assign_Worker('Assign_Form','User_Data_List','Admin/Order/add');"><span>指派配送员</span></a>
+                </li>
+                <li>
+                    <a href="JavaScript:void(0);"
+                       onclick="Order_Print('','User_Data_List');"><span>打印订单</span></a>
+                </li>
+                <li>
+                    <a href="JavaScript:void(0);"
+                       onclick="Notice_worker('User_Data_List')"><span>提醒接单</span></a>
+                </li>
+            </ul>
+        </div>
+    </div>
+    <div style="display: none">
+        <form id="User_Form" class="update_from"></form>
+        <form id="User_Search_From" class="search_from" style="height: 600px;">
+            <table border="0" cellpadding="0" cellspacing="0" style="width:100%">
+                <tr>
+                    <th>配送员姓名 :</th>
+                    <td><input name="s_username" type="text" class="easyui-textbox" style="height:30px;"></td>
+                </tr>
+                <tr>
+                    <th>收货人姓名 :</th>
+                    <td><input name="s_receiver_name" type="text" class="easyui-textbox" style="height:30px;"></td>
+                </tr>
+                <tr>
+                    <th>收货人电话 :</th>
+                    <td><input name="s_receiver_telephone" type="text" class="easyui-textbox" style="height:30px;"></td>
+                </tr>
+                <tr>
+                    <th>收货人街道 :</th>
+                    <td><input name="s_receiver_street" type="text" class="easyui-textbox" style="height:30px;"></td>
+                </tr>
+                <tr>
+                    <th>发货人姓名 :</th>
+                    <td><input name="s_consigner_name" type="text" class="easyui-textbox" style="height:30px;"></td>
+                </tr>
+                <tr>
+                    <th>发货人电话 :</th>
+                    <td><input name="s_consigner_telephone" type="text" class="easyui-textbox" style="height:30px;"></td>
+                </tr>
+                <tr>
+                    <th>发货人街道 :</th>
+                    <td><input name="s_consigner_street" type="text" class="easyui-textbox" style="height:30px;"></td>
+                </tr>
+                <tr>
+                    <th>订单号 :</th>
+                    <td><input name="s_number" type="text" class="easyui-textbox" style="height:30px;"></td>
+                </tr>
+                <tr>
+                    <th>下单时间 :</th>
+                    <td><input name="s_order_add_time_min" type="text" class="easyui-datetimebox" style="height:30px;"> -
+                        <input name="s_order_add_time_max" type="text" class="easyui-datetimebox" style="height:30px;">
+                    </td>
+                </tr>
+                <tr>
+                    <th>状态 : </th>
+                    <td>
+                        <select name="s_order_status" class="easyui-combobox" style="height:30px;" data-options="value:'1',multiple:false,required:false,editable:false">
+                            <option value="0" >交易关闭</option>
+                            <option value="1" >等待调配</option>
+                            <option value="2" >等待配送员接收</option>
+                            <option value="3" >已接收待取货</option>
+                            <option value="4" >已取货待配送</option>
+                            <option value="5" >已送达完成交易</option>
+                        </select>
+                    </td>
+                </tr>
+            </table>
+        </form>
+    </div>
+
+    <div style="display: none">
+        <form id="Assign_Form" method="post">
+            <table class="table tb-type2 nobdb">
+                <tbody>
+                <tr>
+                    <td colspan="2" class="required"><label for="for_name">接收配送员:</label></td>
+                </tr>
+                <tr class="noborder">
+                    <td class="vatop rowform">
+                        <select id="worker_id" class="easyui-combogrid" name="worker_id" style="width:290px;"
+                                data-options="
+            panelWidth:335,
+            panelHeight:350,
+            idField:'id',
+            textField:'real_name',
+            singleSelect:'true',
+            fit: true,
+            striped: true,
+            border: false,
+            pagination: true,
+            pageSize: 20,
+            pageList: [10, 20, 50],
+            pageNumber: 1,
+            sortName: 'id',
+            sortOrder: 'desc',
+            mode: 'remote',
+            url:'{:U('Member/ajaxComco')}',
+            columns:[[
+                {field:'real_name',align: 'center',halign: 'center',title:'实名',width:80},
+                {field:'username',align: 'center',halign: 'center',title:'用户名',width:80},
+                {field:'phone',align: 'center',halign: 'center',title:'手机号码',width:100},
+                {field:'current_order',align: 'center',halign: 'center',title:'当前任务数',width:72},
+            ]]
+        "></select>
+                    </td>
+                    <td class="vatop tips"></td>
+                </tr>
+                </tbody>
+            </table>
+        </form>
+    </div>
+
+    <div style="display: none">
+        <form id="Add_Order_Data_Form" method="post">
+            <table class="table tb-type2 nobdb">
+                <tbody>
+                <tr>
+                    <td class="required" style="width: 50%;padding: 10px !important;border-top: none;">
+                        <label for="for_name" style="font-size: 16px;margin-right: 10px;">发件人姓名:</label>
+                        <input name="consigner_name" type="text" class="easyui-textbox"
+                               style="height:30px;width: 320px;" value="" data-options="required:false">
+                    </td>
+                    <td class="required" style="border-top: none;">
+                        <label for="for_name" style="font-size: 16px;margin-right: 10px;">发件人电话:</label>
+                        <input name="consigner_telephone" type="text" class="easyui-numberbox"
+                               style="height:30px;width: 320px;" value="" data-options="required:false">
+                    </td>
+                </tr>
+                <tr>
+                    <td class="required" style="width: 50%;padding: 10px !important;position: relative;">
+                        <label for="for_name" style="font-size: 16px;margin-right: 10px;">发件人地址:</label>
+                        <input name="consigner_street" id="consigner_street" type="text"
+                               style="height:30px;width: 280px;">
+                        <img src="__IMG__/baidumap.jpg" onclick="chaddress(0)"
+                             style="position: absolute;top: 13px;right: 18px;width: 27px;height: 22px;">
+                    </td>
+                    <td class="required">
+                        <label for="for_name" style="font-size: 16px;margin-right: 10px;">发件人门牌:</label>
+                        <input name="consigner_doorplate" type="text" class="easyui-textbox"
+                               style="height:30px;width: 320px;" value="" data-options="required:false">
+                    </td>
+                </tr>
+                <tr>
+                    <td class="required" style="width: 50%;padding: 10px !important;">
+                        <label for="for_name" style="font-size: 16px;margin-right: 10px;">收件人姓名:</label>
+                        <input name="receiver_name" type="text" class="easyui-textbox" style="height:30px;width: 320px;"
+                               value="" data-options="required:false">
+                    </td>
+
+                    <td class="required">
+                        <label for="for_name" style="font-size: 16px;margin-right: 10px;">收件人电话:</label>
+                        <input name="receiver_telephone" type="text" class="easyui-numberbox"
+                               style="height:30px;width: 320px;" value="" data-options="required:false">
+                    </td>
+                </tr>
+                <tr>
+                    <td class="required" style="width: 50%;padding: 10px !important;position: relative;">
+                        <label for="for_name" style="font-size: 16px;margin-right: 10px;">收件人地址:</label>
+                        <input name="receiver_street" id="receiver_street" type="text"
+                               style="height:30px;width: 280px;">
+                        <img src="__IMG__/baidumap.jpg" onclick="chaddress(1)"
+                             style="position: absolute;top: 13px;right: 18px;width: 27px;height: 22px;">
+                    </td>
+                    <td class="required">
+                        <label for="for_name" style="font-size: 16px;margin-right: 10px;">收件人门牌:</label>
+                        <input name="receiver_doorplate" type="text" class="easyui-textbox"
+                               style="height:30px;width: 320px;" value="" data-options="required:false">
+                    </td>
+                </tr>
+                <tr>
+                    <td class="required" style="width: 50%;padding: 10px !important;">
+                        <label for="for_name" style="font-size: 16px;margin-right: 12px;">付 款 方 式:</label>
+                        <select name="payment_method" class="easyui-combobox"
+                                style="height:30px;width: 320px;margin-left: 2px;"
+                                data-options="value:'0',multiple:false,required:false,editable:false">
+                            <option value="0">货到付款</option>
+                            <option value="1">微信</option>
+                            <option value="2">余额</option>
+                            <option value="3">刷卡</option>
+                        </select>
+                    </td>
+                    <td class="required">
+                        <label for="for_name" style="font-size: 16px;letter-spacing: 3px;margin-right: 8px;">服 务 费
+                            :</label>
+                        <input name="service_fee" id="service_fee" type="text" class="easyui-numberbox"
+                               style="height:30px;width: 320px;" value=""
+                               data-options="required:false,precision:2,prefix:'￥'">
+                    </td>
+                </tr>
+                <tr>
+                    <td class="required" style="width: 50%;padding: 10px !important;">
+                        <label for="for_name"
+                               style="font-size: 16px;letter-spacing: 3px;margin-right: 10px;">其他费用:</label>
+                        <input name="other_fee" type="text" class="easyui-numberbox" style="height:30px;width: 320px;"
+                               value="" data-options="required:false,precision:2,prefix:'￥'">
+                    </td>
+                    <td class="required">
+                        <label for="for_name"
+                               style="font-size: 16px;letter-spacing: 4px;margin-right: 9px;">骑行距离:</label>
+                        <input name="order_distance" id="order_distance" type="text" class="easyui-numberbox"
+                               style="height:30px;width: 320px;" value=""
+                               data-options="required:false,precision:2,suffix:'千米'">
+                    </td>
+                </tr>
+
+                <tr>
+                    <td class="required " colspan="2" style="width: 50%;padding: 10px !important;">
+                        <label for="for_name"
+                               style="font-size: 16px;letter-spacing: 21px;margin-right: -5px;">备注:</label>
+                        <input name="order_remark" value="" type="text" class="easyui-textbox"
+                               data-options="required:false,multiline:true" style="width:760px; height:80px;">
+                    </td>
+                </tr>
+                </tbody>
+            </table>
+            <input name="consigner_address_lat" id="consigner_address_lat" type="hidden">
+            <input name="consigner_address_lng" id="consigner_address_lng" type="hidden">
+            <input name="receiver_address_lat" id="receiver_address_lat" type="hidden">
+            <input name="receiver_address_lng" id="receiver_address_lng" type="hidden">
+        </form>
+    </div>
+
+    <table id="User_Data_List"></table>
+
+    <script type="text/javascript"
+            src="http://api.map.baidu.com/api?v=2.0&ak=NmywArUF1vhMR1ATov3dNoCx3ED5rgVW"></script>
+    <div style="display: none">
+        <div id="allmap">
+        </div>
+    </div>
+    <script type="text/javascript">
+
+        var type;
+        function chaddress(t) {
+            type = t;
+            $('#allmap').dialog({
+                width: 1200,
+                top: 0,
+                height: 800,
+                title: '选择地址',
+                cache: false
+            })
+        }
+
+        // 百度地图API功能
+        var map = new BMap.Map("allmap");
+        var point = new BMap.Point(116.331398, 39.897445);
+        //map.centerAndZoom(point,12);
+        map.centerAndZoom('南宁', 12);
+        map.enableScrollWheelZoom();   //启用滚轮放大缩小，默认禁用
+        map.enableContinuousZoom();    //启用地图惯性拖拽，默认禁用
+        var geoc = new BMap.Geocoder();
+
+        map.addEventListener("ondblclick", function (e) {
+            var pt = e.point;
+            map.addOverlay(new BMap.Marker(pt));
+            geoc.getLocation(pt, function (rs) {
+                var addComp = rs.addressComponents;
+                $.messager.confirm('确定操作', '您确认想要选择这个地址吗：' + addComp.province + addComp.city + addComp.district + addComp.street + addComp.streetNumber, function (flag) {
+                    if (flag) {
+                        if (type == 0) {
+                            $('#consigner_address_lat').val(rs.point.lat);
+                            $('#consigner_address_lng').val(rs.point.lng);
+                            $('#consigner_street').val(addComp.province + addComp.city + addComp.district + addComp.street + addComp.streetNumber);
+                        } else if (type == 1) {
+                            $('#receiver_address_lat').val(point.lat);
+                            $('#receiver_address_lng').val(point.lng);
+                            $('#receiver_street').val(addComp.province + addComp.city + addComp.district + addComp.street + addComp.streetNumber);
+                        }
+                        $('#allmap').dialog('close');
+                        getDistance();
+                    }
+                })
+            });
+        });
+
+        // 百度地图API功能
+        function G(id) {
+            return document.getElementById(id);
+        }
+
+        var ac = new BMap.Autocomplete(    //建立一个自动完成的对象
+                {
+                    "input": "consigner_street"
+                    , "location": map
+                });
+
+        var ad = new BMap.Autocomplete(    //建立一个自动完成的对象
+                {
+                    "input": "receiver_street"
+                    , "location": map
+                });
+
+
+        var myGeo = new BMap.Geocoder();
+        var acValue;
+        ac.addEventListener("onconfirm", function (e) {    //鼠标点击下拉列表后的事件
+            console.log(e);
+            var _value = e.item.value;
+            acValue = _value.province + _value.city + _value.district + _value.street + _value.business;
+            // 获取地址的经纬度
+            myGeo.getPoint(acValue, function (point) {
+                if (point) {
+                    $('#consigner_address_lat').val(point.lat);
+                    $('#consigner_address_lng').val(point.lng);
+                    getDistance();
+                } else {
+                    alert("您选择地址没有解析到结果!");
+                }
+            }, "南宁市");
+        });
+
+        var adValue;
+        ad.addEventListener("onconfirm", function (e) {    //鼠标点击下拉列表后的事件
+            console.log(e);
+            var _value = e.item.value;
+            adValue = _value.province + _value.city + _value.district + _value.street + _value.business;
+            // 将地址解析结果显示在地图上,并调整地图视野
+            myGeo.getPoint(adValue, function (point) {
+                if (point) {
+                    $('#receiver_address_lat').val(point.lat);
+                    $('#receiver_address_lng').val(point.lng);
+                    getDistance();
+                } else {
+                    alert("您选择地址没有解析到结果!");
+                }
+            }, "南宁市");
+        });
+
+
+        //根据经纬度计算两点之间的距离和服务费
+        function getDistance() {
+            var consigner_address_lat = $('#consigner_address_lat').val();
+            var consigner_address_lng = $('#consigner_address_lng').val();
+            var receiver_address_lat = $('#receiver_address_lat').val();
+            var receiver_address_lng = $('#receiver_address_lng').val();
+            if (consigner_address_lat.length > 0 && consigner_address_lng.length > 0 && receiver_address_lat.length > 0 && receiver_address_lng.length > 0) {
+                $.post('Admin/Order/getGeocoderDistance', {
+                    consigner_address_lat: consigner_address_lat,
+                    consigner_address_lng: consigner_address_lng,
+                    receiver_address_lat: receiver_address_lat,
+                    receiver_address_lng: receiver_address_lng
+                }, function (res) {
+                    if (res.status != 1) {
+                        $.messager.show({title: '错误提示', msg: res.info, timeout: 2000, showType: 'slide'});
+                    } else {
+                        $('#service_fee').numberbox('setValue', res.data.fee);
+                        $('#order_distance').numberbox('setValue', res.data.distance);
+                    }
+                })
+            }
+        }
+
+    </script>
+
+
+    <script type="text/javascript">
+
+        $(function () {
+            $("#User_Data_List").datagrid({
+                url: "{:U('Order/index')}",
+                fit: true,
+                striped: true,
+                border: false,
+                pagination: true,
+                pageSize: 25,
+                pageList: [10, 25, 50],
+                pageNumber: 1,
+                sortName: 'id',
+                sortOrder: 'desc',
+                toolbar: '#User_Bar',
+                singleSelect: true,
+                columns: [[{
+                    field: 'id',
+                    title: 'ID',
+                    align: 'center',
+                    halign: 'center',
+                    width: 80,
+                    sortable: true
+                },
+                    {
+                        field: "number",
+                        title: "订单号",
+                        align: 'center',
+                        halign: 'center',
+                        width: 200,
+                        sortable: true
+                    },
+                    {
+                        field: "order_status",
+                        title: "订单状态",
+                        align: 'center',
+                        halign: 'center',
+                        width: 150,
+                        sortable: true,
+                        formatter: function (value, row, index) {
+                            var op_status = new Array()
+                            op_status["0"] = "交易关闭"
+                            op_status["1"] = "等待调配"
+                            op_status["2"] = "等待配送员接收"
+                            op_status["3"] = "已接收待取货"
+                            op_status["4"] = "已取货待配送"
+                            op_status["5"] = "已送达完成交易"
+                            return op_status[value];
+                        }
+                    },
+                    {
+                        field: "worker",
+                        title: "配送员",
+                        align: 'center',
+                        halign: 'center',
+                        width: 100,
+                        sortable: true
+                    },
+                    {
+                        field: "work_receive_time",
+                        title: "接单时间",
+                        align: 'center',
+                        halign: 'center',
+                        width: 150,
+                        sortable: true,
+                        formatter: function (value, row, index) {
+                            return u_to_ymdhis(value)
+                        }
+                    },
+                    {
+                        field: "work_get_time",
+                        title: "取货时间",
+                        align: 'center',
+                        halign: 'center',
+                        width: 150,
+                        sortable: true,
+                        formatter: function (value, row, index) {
+                            return u_to_ymdhis(value)
+                        }
+                    },
+                    {
+                        field: "work_finish_time",
+                        title: "完成时间",
+                        align: 'center',
+                        halign: 'center',
+                        width: 150,
+                        sortable: true,
+                        formatter: function (value, row, index) {
+                            return u_to_ymdhis(value)
+                        }
+                    },
+                    {
+                        field: "payment_method",
+                        title: "付款方式",
+                        align: 'center',
+                        halign: 'center',
+                        width: 150,
+                        sortable: true,
+                        formatter: function (value, row, index) {
+                            var op_status = new Array()
+                            op_status["0"] = "货到付款"
+                            op_status["1"] = "微信"
+                            op_status["2"] = "余额"
+                            op_status["3"] = "刷卡"
+                            return op_status[value];
+                        }
+                    },
+                    {
+                        field: "order_distance",
+                        title: "路程(km)",
+                        align: 'center',
+                        halign: 'center',
+                        width: 100,
+                        sortable: true
+                    }, {
+                        field: "total_fee",
+                        title: "总服务费(元)",
+                        align: 'center',
+                        halign: 'center',
+                        width: 100,
+                        sortable: true
+                    },
+                    {
+                        field: "service_fee",
+                        title: "配送服务费(元)",
+                        align: 'center',
+                        halign: 'center',
+                        width: 100,
+                        sortable: true
+                    },
+                    {
+                        field: "other_fee",
+                        title: "其他费用(元)",
+                        align: 'center',
+                        halign: 'center',
+                        width: 100,
+                        sortable: true
+                    },
+                    {
+                        field: "receiver_name",
+                        title: "收货人姓名",
+                        align: 'center',
+                        halign: 'center',
+                        width: 100,
+                        sortable: true
+                    },
+                    {
+                        field: "receiver_telephone",
+                        title: "收货人电话",
+                        align: 'center',
+                        halign: 'center',
+                        width: 150,
+                        sortable: true
+                    },
+                    {
+                        field: "receiver_street",
+                        title: "收货人街道",
+                        align: 'center',
+                        halign: 'center',
+                        width: 300,
+                        sortable: true
+                    }, {
+                        field: "receiver_doorplate",
+                        title: "收货人门牌",
+                        align: 'center',
+                        halign: 'center',
+                        width: 150,
+                        sortable: true
+                    }, {
+                        field: "receiver_remark",
+                        title: "收货人备注",
+                        align: 'center',
+                        halign: 'center',
+                        width: 150,
+                        sortable: true
+                    }, {
+                        field: "consigner_name",
+                        title: "发货人姓名",
+                        align: 'center',
+                        halign: 'center',
+                        width: 150,
+                        sortable: true
+                    }, {
+                        field: "consigner_telephone",
+                        title: "发货人电话",
+                        align: 'center',
+                        halign: 'center',
+                        width: 150,
+                        sortable: true
+                    }, {
+                        field: "consigner_street",
+                        title: "发货人街道",
+                        align: 'center',
+                        halign: 'center',
+                        width: 300,
+                        sortable: true
+                    }, {
+                        field: "consigner_doorplate",
+                        title: "发货人门牌",
+                        align: 'center',
+                        halign: 'center',
+                        width: 150,
+                        sortable: true
+                    }, {
+                        field: "consigner_remark",
+                        title: "发货人备注",
+                        align: 'center',
+                        halign: 'center',
+                        width: 150,
+                        sortable: true
+                    }, {
+                        field: "order_remark",
+                        title: "订单备注",
+                        align: 'center',
+                        halign: 'center',
+                        width: 150,
+                        sortable: true
+                    },
+                    {
+                        field: "order_type",
+                        title: "订单类型",
+                        align: 'center',
+                        halign: 'center',
+                        width: 100,
+                        sortable: true,
+                        formatter: function (value, row, index) {
+                            var op_status = new Array()
+                            op_status["0"] = "买东西"
+                            op_status["1"] = "送东西"
+                            op_status["2"] = "取东西"
+                            return op_status[value];
+                        }
+                    },
+                    {
+                        field: "appointment",
+                        title: "预约时间",
+                        align: 'center',
+                        halign: 'center',
+                        width: 150,
+                        sortable: true,
+                        formatter: function (value, row, index) {
+                            return u_to_ymdhis(value)
+                        }
+                    }, {
+                        field: "is_flask",
+                        title: "带保温箱",
+                        align: 'center',
+                        halign: 'center',
+                        width: 100,
+                        sortable: true,
+                        formatter: function (value, row, index) {
+                            var op_status = new Array()
+                            op_status["0"] = "否"
+                            op_status["1"] = "是"
+                            return op_status[value];
+                        }
+                    },
+                    {
+                        field: "is_disturb",
+                        title: "免打扰",
+                        align: 'center',
+                        halign: 'center',
+                        width: 50,
+                        sortable: true,
+                        formatter: function (value, row, index) {
+                            var op_status = new Array()
+                            op_status["0"] = "否"
+                            op_status["1"] = "是"
+                            return op_status[value];
+                        }
+                    },
+                    {
+                        field: "order_add_time",
+                        title: "添加时间",
+                        align: 'center',
+                        halign: 'center',
+                        width: 150,
+                        sortable: true,
+                        formatter: function (value, row, index) {
+                            return u_to_ymdhis(value)
+                        }
+                    },
+                    {
+                        field: "source",
+                        title: "订单来源",
+                        align: 'center',
+                        halign: 'center',
+                        width: 100,
+                        sortable: true,
+                        formatter: function (value, row, index) {
+                            var op_status = new Array()
+                            op_status["0"] = "电话"
+                            op_status["1"] = "微信"
+                            op_status["2"] = "网站"
+                            op_status["3"] = "商城"
+                            op_status["4"] = "商家"
+                            return op_status[value];
+                        }
+                    },
+                    {
+                        field: "operate",
+                        title: "操作",
+                        align: 'center',
+                        halign: 'center',
+                        width: 200,
+                        formatter: function (value, row, index) {
+                            operate_menu = '';
+                            operate_menu = operate_menu + "<a href='#' onclick=Data_Remove('<?php echo U('del'); ?>&id=" + row.id + "','User_Data_List') >删除</a>";
+                            return operate_menu;
+                        }
+                    }
+                ]]
+            });
+        })
+
+
+        $('#User_Data_List').datagrid({
+            onDblClickRow: function (rowIndex, rowData) {
+                //清空数据
+                $('#User_View_From').form('clear');
+                $('#User_View_From').form('load',rowData);
+                $('#User_View_From').dialog({
+                    width: 900,
+                    top: 0,
+                    height: 500,
+                    title: '查看订单',
+                    modal: true,
+                    cache: false
+                })
+            }
+        });
+
+    </script>
+
+
+    <div style="display: none">
+        <form id="User_View_From" class="search_from" style="height: 600px;">
+            <table class="table tb-type2 nobdb">
+                <tbody>
+                <tr>
+                    <td class="required" style="width: 50%;padding: 10px !important;border-top: none;">
+                        <label for="for_name" style="font-size: 16px;margin-right: 10px;">发件人姓名:</label>
+                        <input name="consigner_name" type="text" class="easyui-textbox"
+                               style="height:30px;width: 320px;" value="" data-options="required:false">
+                    </td>
+                    <td class="required" style="border-top: none;">
+                        <label for="for_name" style="font-size: 16px;margin-right: 10px;">发件人电话:</label>
+                        <input name="consigner_telephone" type="text" class="easyui-numberbox"
+                               style="height:30px;width: 320px;" value="" data-options="required:false">
+                    </td>
+                </tr>
+                <tr>
+                    <td class="required" style="width: 50%;padding: 10px !important;position: relative;">
+                        <label for="for_name" style="font-size: 16px;margin-right: 10px;">发件人地址:</label>
+                        <input name="consigner_street" type="text" style="height:30px;width: 320px;">
+                    </td>
+                    <td class="required">
+                        <label for="for_name" style="font-size: 16px;margin-right: 10px;">发件人门牌:</label>
+                        <input name="consigner_doorplate" type="text" class="easyui-textbox"
+                               style="height:30px;width: 320px;" value="" data-options="required:false">
+                    </td>
+                </tr>
+                <tr>
+                    <td class="required" style="width: 50%;padding: 10px !important;">
+                        <label for="for_name" style="font-size: 16px;margin-right: 10px;">收件人姓名:</label>
+                        <input name="receiver_name" type="text" class="easyui-textbox" style="height:30px;width: 320px;"
+                               value="" data-options="required:false">
+                    </td>
+
+                    <td class="required">
+                        <label for="for_name" style="font-size: 16px;margin-right: 10px;">收件人电话:</label>
+                        <input name="receiver_telephone" type="text" class="easyui-numberbox"
+                               style="height:30px;width: 320px;" value="" data-options="required:false">
+                    </td>
+                </tr>
+                <tr>
+                    <td class="required" style="width: 50%;padding: 10px !important;position: relative;">
+                        <label for="for_name" style="font-size: 16px;margin-right: 10px;">收件人地址:</label>
+                        <input name="receiver_street" type="text" style="height:30px;width: 320px;">
+                    </td>
+                    <td class="required">
+                        <label for="for_name" style="font-size: 16px;margin-right: 10px;">收件人门牌:</label>
+                        <input name="receiver_doorplate" type="text" class="easyui-textbox"
+                               style="height:30px;width: 320px;" value="" data-options="required:false">
+                    </td>
+                </tr>
+                <tr>
+                    <td class="required" style="width: 50%;padding: 10px !important;">
+                        <label for="for_name" style="font-size: 16px;margin-right: 12px;">付 款 方 式:</label>
+                        <select name="payment_method" class="easyui-combobox"
+                                style="height:30px;width: 320px;margin-left: 2px;"
+                                data-options="value:'0',multiple:false,required:false,editable:false">
+                            <option value="0">货到付款</option>
+                            <option value="1">微信</option>
+                            <option value="2">余额</option>
+                            <option value="3">刷卡</option>
+                        </select>
+                    </td>
+                    <td class="required">
+                        <label for="for_name" style="font-size: 16px;letter-spacing: 3px;margin-right: 8px;">服 务 费
+                            :</label>
+                        <input name="service_fee" type="text" class="easyui-numberbox"
+                               style="height:30px;width: 320px;" value=""
+                               data-options="required:false,precision:2,prefix:'￥'">
+                    </td>
+                </tr>
+                <tr>
+                    <td class="required" style="width: 50%;padding: 10px !important;">
+                        <label for="for_name"
+                               style="font-size: 16px;letter-spacing: 3px;margin-right: 10px;">其他费用:</label>
+                        <input name="other_fee" type="text" class="easyui-numberbox" style="height:30px;width: 320px;"
+                               value="" data-options="required:false,precision:2,prefix:'￥'">
+                    </td>
+                    <td class="required">
+                        <label for="for_name"
+                               style="font-size: 16px;letter-spacing: 4px;margin-right: 9px;">骑行距离:</label>
+                        <input name="order_distance" value="{$_info.order_distance}" type="text" class="easyui-numberbox"
+                               style="height:30px;width: 320px;" value=""
+                               data-options="required:false,precision:2,suffix:'千米'">
+                    </td>
+                </tr>
+
+                <tr>
+                    <td class="required " colspan="2" style="width: 50%;padding: 10px !important;">
+                        <label for="for_name"
+                               style="font-size: 16px;letter-spacing: 21px;margin-right: -5px;">备注:</label>
+                        <input name="order_remark" type="text" class="easyui-textbox"
+                               data-options="required:false,multiline:true" style="width:760px; height:80px;">
+                    </td>
+                </tr>
+                </tbody>
+            </table>
+        </form>
+    </div>
+</block>
+

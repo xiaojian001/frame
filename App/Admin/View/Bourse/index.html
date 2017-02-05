@@ -1,0 +1,118 @@
+<extend name="Public/base"/><block name="body"><div class="fixed-bar" id="User_Bar">
+	<div class="item-title">
+		<h3>会员</h3>
+		<ul class="tab-base">
+			<li><a class="current" href="JavaScript:void(0);" onclick="Data_Reload('User_Data_List');"><span>列表</span></a></li>
+			<li><a href="JavaScript:void(0);" onclick="Data_Search('User_Search_From','User_Data_List');"><span>搜索</span></a></li>
+			<if condition="Is_Auth('Admin/Bourse/add')">
+			<li><a href="{:U('Admin/Bourse/add')}"><span>新增</span></a></li>
+			</if>
+		</ul>
+	</div>
+</div>
+<div style="display: none">
+<form id="User_Form" class="update_from"></form>
+  <form id="User_Search_From" class="search_from" style="height: 400px;">
+	<table border="0" cellpadding="0" cellspacing="0" style="width:100%">
+
+        <tr>
+			<th>用户名 : </th>
+			<td><input name="s_nickname" type="text" class="easyui-textbox" style="height:30px;"></td>
+		</tr>
+        <tr>
+            <th>实名 : </th>
+            <td><input name="s_real_name" type="text" class="easyui-textbox" style="height:30px;"></td>
+        </tr>
+        <tr>
+            <th>电话号码 : </th>
+            <td><input name="s_phone" type="text" class="easyui-textbox" style="height:30px;"></td>
+        </tr>
+        <tr>
+			<th>性别 : </th>
+            <td>
+            <select name="s_sex" class="easyui-combobox" style="height:30px;" data-options="value:'1',multiple:false,required:false,editable:false">
+            <option value="0" >男</option>
+            <option value="1" >女</option>
+            </select>
+            </td>
+         </tr>
+    </table>
+  </form>
+</div>
+
+<table id="User_Data_List"></table>
+
+<script type="text/javascript">
+$(function() {
+    $("#User_Data_List").datagrid({
+        url: "{:U('Bourse/index')}",
+        fit: true,
+        striped: true,
+        border: false,
+        pagination: true,
+        pageSize: 25,
+        pageList: [10, 25, 50],
+        pageNumber: 1,
+        sortName: 'id',
+        sortOrder: 'desc',
+        toolbar: '#User_Bar',
+        singleSelect: true,
+        columns: [[{
+            field: 'id',
+            title: 'ID',
+            width: 80,
+            align: 'center',
+            halign: 'center',
+            sortable: true
+        },
+        {
+            field: "name",
+            title: "交易所名字",
+            width: 100,
+            align: 'center',
+            halign: 'center',
+            sortable: true
+        },{
+            field: "logo",
+            title: "logo",
+            width: 400,
+            align: 'center',
+            halign: 'center',
+            sortable: true
+        },
+        {
+            field: "add_time",
+            title: "添加时间",
+            width: 150,
+            align: 'center',
+            halign: 'center',
+            sortable: true,
+            formatter: function(value, row, index) {
+                return u_to_ymdhis(value)
+        }
+        },
+            {
+                field: "url",
+                title: "软件下载地址",
+                width: 400,
+                align: 'center',
+                halign: 'center',
+                sortable: true
+            },
+        {
+            field: "operate",
+            title: "操作",
+            align: 'center',
+            halign: 'center',
+            width: 200,
+            formatter: function(value, row, index) {
+                operate_menu = '';
+				operate_menu = operate_menu + "<a href='<?php echo U('edit'); ?>&id=" + row.id + "' >编辑</a>";
+				operate_menu = operate_menu+" | <a href='#' onclick=Data_Remove('<?php echo U('del'); ?>&id=" + row.id + "','User_Data_List') >删除</a>";
+				return operate_menu;
+			}}
+		]]
+	});
+})
+</script>
+</block>

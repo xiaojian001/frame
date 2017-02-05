@@ -1,0 +1,173 @@
+<extend name="Public/base"/>
+<block name="body">
+
+    <div class="fixed-bar" id="User_Bar" style="position: relative;">
+        <div class="item-title">
+            <h3>用户</h3>
+            <ul class="tab-base">
+                <li><a class="current" href="JavaScript:void(0);"
+                       onclick="Data_Reload('User_Data_List');"><span>列表</span></a></li>
+                <li><a href="JavaScript:void(0);"
+                       onclick="Data_Search('User_Search_From','User_Data_List');"><span>搜索</span></a></li>
+                <li>
+                    <a href="JavaScript:void(0);"
+                       onclick="workerMap()"><span>查看地图</span></a>
+                </li>
+            </ul>
+        </div>
+    </div>
+    <div style="display: none">
+        <form id="User_Form" class="update_from"></form>
+        <form id="User_Search_From" class="search_from">
+            <table border="0" cellpadding="0" cellspacing="0" style="width:100%">
+                <tr>
+                    <th>配送员 :</th>
+                    <td><input name="s_real_name" type="text" class="easyui-textbox" style="height:30px;"></td>
+                </tr>
+            </table>
+        </form>
+    </div>
+
+    <table id="User_Data_List"></table>
+
+    <div id="loadMap">
+    <div id="allmap_mark" style="position: absolute;width: 988px;height: 600px;left: 200px;top: 113px;z-index: 99999;border: 5px solid #37485d;background-color: #eee;display: none;">
+        <div style="position: relative;width: 100%;height: 25px;">
+            <p class="mark-tit" style="background-color: #37485d;color: #fff;font-size: 12px;padding: 4px 5px"></p>
+            <div class="panel-tool" style="position: absolute;top: 10px;right: 0px;"><a class="panel-tool-close close-tool"></a></div>
+        </div>
+        <div id="allmap" style="width: 988px;height: 575px;">
+
+        </div>
+    </div>
+    </div>
+
+
+    <script type="text/javascript">
+
+        $(function () {
+            $(".close-tool").click(function () {
+                $("#allmap_mark").hide();
+                $("#loadMap").hide();
+                $("#allmap_mark").remove();
+                window.location.reload();
+            })
+            $("#User_Data_List").datagrid({
+                url: "{:U('DriverWorkLog/index')}",
+                fit: true,
+                striped: true,
+                border: false,
+                pagination: true,
+                pageSize: 25,
+                pageList: [10, 25, 50],
+                pageNumber: 1,
+                sortName: 'id',
+                sortOrder: 'desc',
+                toolbar: '#User_Bar',
+                singleSelect: true,
+                columns: [[{
+                    field: 'id',
+                    title: 'ID',
+                    align: 'center',
+                    halign: 'center',
+                    width: 80,
+                    sortable: true
+                },
+                    {
+                        field: "real_name",
+                        title: "配送员",
+                        align: 'center',
+                        halign: 'center',
+                        width: 100,
+                        sortable: true
+                    },
+                    {
+                        field: "lng",
+                        title: "经度",
+                        align: 'center',
+                        halign: 'center',
+                        width: 150,
+                        sortable: true
+                    },
+                    {
+                        field: "lat",
+                        title: "纬度",
+                        align: 'center',
+                        halign: 'center',
+                        width: 150,
+                        sortable: true
+                    },
+                    {
+                        field: "add_time",
+                        title: "打卡时间",
+                        width: 150,
+                        align: 'center',
+                        halign: 'center',
+                        sortable: true,
+                        formatter: function (value, row, index) {
+                            return u_to_ymdhis(value)
+                        }
+                    },
+                    {
+                        field: "work_type",
+                        title: "状态",
+                        width: 80,
+                        align: 'center',
+                        halign: 'center',
+                        sortable: true,
+                        formatter: function (value, row, index) {
+                            var op_status = new Array()
+                            op_status["0"] = "下班"
+                            op_status["1"] = "上班"
+
+                            return op_status[value];
+                        }
+                    },
+                    {
+                        field: "operate",
+                        title: "操作",
+                        align: 'center',
+                        halign: 'center',
+                        width: 200,
+                        formatter: function (value, row, index) {
+                            operate_menu = '';
+                            operate_menu = operate_menu + " <a href='#' onclick=Data_Remove('<?php echo U('del'); ?>&id=" + row.id + "','User_Data_List') >删除</a>";
+                            return operate_menu;
+                        }
+                    }
+                ]]
+            });
+        })
+
+        function workerMap() {
+            var row = $('#User_Data_List').datagrid('getSelected');
+            if (!row) {
+                $.messager.show({
+                    title: '错误提示', msg: '请选择你需要查看的记录！', timeout: 3000, showType: 'slide', style: {
+                        right: '',
+                        top: document.body.scrollTop + document.documentElement.scrollTop,
+                        bottom: ''
+                    }
+                });
+                return false;
+            }
+
+            // 百度地图API功能
+            var pt = {lng: row.lng, lat: row.lat}
+            var arrtype = {0: '下班', 1: '上班'};
+            var title = row.real_name + '--' + u_to_ymdhis(row.add_time)+arrtype[row.work_type]+'打卡';
+            var map = new BMap.Map("allmap");
+            map.centerAndZoom('南宁', 12);
+            map.addOverlay(new BMap.Marker(pt));
+            map.enableScrollWheelZoom();   //启用滚轮放大缩小，默认禁用
+            map.enableContinuousZoom();    //启用地图惯性拖拽，默认禁用
+            $('.mark-tit').html(title);
+            $("#allmap_mark").show();
+        }
+    </script>
+    <script type="text/javascript"
+            src="http://api.map.baidu.com/api?v=2.0&ak=NmywArUF1vhMR1ATov3dNoCx3ED5rgVW"></script>
+
+
+</block>
+<!--弹窗-->

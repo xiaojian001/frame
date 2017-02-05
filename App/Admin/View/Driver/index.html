@@ -1,0 +1,100 @@
+<extend name="Public/base"/>
+<block name="body">
+    <div class="fixed-bar" id="User_Bar">
+        <div class="item-title">
+            <h3>配送员</h3>
+            <ul class="tab-base">
+                <li><a class="current" href="JavaScript:void(0);"
+                       onclick="Data_Reload('User_Data_List');"><span>列表</span></a></li>
+                <li><a href="JavaScript:void(0);"
+                       onclick="Data_Search('User_Search_From','User_Data_List');"><span>搜索</span></a></li>
+            </ul>
+        </div>
+    </div>
+    <div style="display: none">
+        <form id="User_Form" class="update_from"></form>
+        <form id="User_Search_From" class="search_from">
+            <table border="0" cellpadding="0" cellspacing="0" style="width:100%">
+                <tr>
+                    <th>配送员名称 :</th>
+                    <td><input name="s_real_name" type="text" class="easyui-textbox" style="height:30px;"></td>
+                </tr>
+            </table>
+        </form>
+    </div>
+
+    <table id="User_Data_List"></table>
+
+    <script type="text/javascript">
+        $(function () {
+            $("#User_Data_List").datagrid({
+                url: "{:U('Driver/index')}",
+                fit: true,
+                striped: true,
+                border: false,
+                pagination: true,
+                pageSize: 25,
+                pageList: [10, 25, 50],
+                pageNumber: 1,
+                sortName: 'member_id',
+                sortOrder: 'desc',
+                toolbar: '#User_Bar',
+                singleSelect: true,
+                columns: [[{
+                    field: 'member_id',
+                    title: 'ID',
+                    align: 'center',
+                    halign: 'center',
+                    width: 80,
+                    sortable: true
+                },
+                    {
+                        field: "username",
+                        title: "用户名",
+                        align: 'center',
+                        halign: 'center',
+                        width: 100,
+                        sortable: true
+                    },{
+                        field: "real_name",
+                        title: "实名",
+                        align: 'center',
+                        halign: 'center',
+                        width: 100,
+                        sortable: true
+                    },
+                    {
+                        field: "current_order",
+                        title: "进行中的订单",
+                        align: 'center',
+                        halign: 'center',
+                        width: 100,
+                        sortable: true
+                    },
+                    {
+                        field: "finish_order",
+                        title: "已完成的订单数",
+                        align: 'center',
+                        halign: 'center',
+                        width: 100,
+                        sortable: true
+                    },
+                    {
+                        field: "driver_status",
+                        title: "状态",
+                        align: 'center',
+                        halign: 'center',
+                        width: 100,
+                        sortable: true,
+                        formatter: function (value, row, index) {
+                            var op_status = new Array()
+                            op_status["0"] = "已下班"
+                            op_status["1"] = "上班中"
+                            return op_status[value];
+                        }
+                    }
+                ]]
+            });
+        })
+    </script>
+</block>

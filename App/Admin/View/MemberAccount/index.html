@@ -1,0 +1,115 @@
+<extend name="Public/base"/><block name="body"><div class="fixed-bar" id="User_Bar">
+	<div class="item-title">
+		<h3>会员</h3>
+		<ul class="tab-base">
+			<li><a class="current" href="JavaScript:void(0);" onclick="Data_Reload('User_Data_List');"><span>列表</span></a></li>
+			<li><a href="JavaScript:void(0);" onclick="Data_Search('User_Search_From','User_Data_List');"><span>搜索</span></a></li>
+		</ul>
+	</div>
+</div>
+<div style="display: none">
+<form id="User_Form" class="update_from"></form>
+  <form id="User_Search_From" class="search_from">
+	<table border="0" cellpadding="0" cellspacing="0" style="width:100%">
+        <tr>
+			<th>电话号码 : </th>
+			<td><input name="s_phone" type="text" class="easyui-textbox" style="height:30px;"></td>
+		</tr>
+    </table>
+  </form>
+</div>
+
+<table id="User_Data_List"></table>
+
+<script type="text/javascript">
+$(function() {
+    $("#User_Data_List").datagrid({
+        url: "{:U('MemberAccount/index')}",
+        fit: true,
+        striped: true,
+        border: false,
+        pagination: true,
+        pageSize: 25,
+        pageList: [10, 25, 50],
+        pageNumber: 1,
+        sortName: 'member_id',
+        sortOrder: 'desc',
+        toolbar: '#User_Bar',
+        singleSelect: true,
+        columns: [[{
+            field: 'member_id',
+            title: '客户ID',
+            align:'center',
+            width: 80,
+            sortable: true
+        },
+            {
+                field: "nickname",
+                title: "用户名",
+                align:'center',
+                width: 100,
+                sortable: true
+            },{
+                field: "real_name",
+                title: "实名",
+                align:'center',
+                width: 100,
+                sortable: true
+            },
+            {
+                field: "total_money",
+                title: "总金额",
+                align:'center',
+                width: 100,
+                sortable: true
+            },
+            {
+                field: "use_money",
+                title: "可提现金额",
+                align:'center',
+                width: 80,
+                sortable: true
+            },
+        {
+            field: "lock_money",
+            title: "锁定金额",
+            align:'center',
+            width: 150,
+            sortable: true
+        },
+        {
+            field: "total_score",
+            title: "总积分",
+            align:'center',
+            width: 100,
+            sortable: true
+        },
+        {
+            field: "use_score",
+            title: "可用积分",
+            align:'center',
+            width: 80,
+            sortable: true
+        },
+            {
+            field: "lock_score",
+            title: "锁定积分",
+            align:'center',
+            width: 80,
+            sortable: true
+        },
+        {
+            field: "operate",
+            title: "操作",
+            align:'center',
+            width: 200,
+            formatter: function(value, row, index) {
+                operate_menu = '';
+				operate_menu = operate_menu + "<a href='<?php echo U('edit'); ?>&id=" + row.id + "' >编辑</a>";
+				return operate_menu;
+			}}
+		]]
+	});
+})
+</script>
+</block>

@@ -1,0 +1,572 @@
+[ 2016-11-29T15:02:24+08:00 ] 127.0.0.1 /user/Jpush/index
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+INFO: [ action_begin ] --START--
+SQL: SHOW COLUMNS FROM `gms_hooks` [ RunTime:0.0050s ]
+SQL: SELECT `name`,`addons` FROM `gms_hooks`  [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `gms_addons` [ RunTime:0.0060s ]
+SQL: SELECT `id`,`name` FROM `gms_addons` WHERE `disabled` = 1 AND `name` IN ('SiteStat')  [ RunTime:0.0000s ]
+INFO: Run Common\Behavior\InitHookBehavior [ RunTime:0.028002s ]
+INFO: [ action_begin ] --END-- [ RunTime:0.028002s ]
+
+[ 2016-11-29T15:02:52+08:00 ] 127.0.0.1 /user/Jpush/index
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+INFO: [ action_begin ] --START--
+SQL: SHOW COLUMNS FROM `gms_hooks` [ RunTime:0.0030s ]
+SQL: SELECT `name`,`addons` FROM `gms_hooks`  [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `gms_addons` [ RunTime:0.0030s ]
+SQL: SELECT `id`,`name` FROM `gms_addons` WHERE `disabled` = 1 AND `name` IN ('SiteStat')  [ RunTime:0.0000s ]
+INFO: Run Common\Behavior\InitHookBehavior [ RunTime:0.015001s ]
+INFO: [ action_begin ] --END-- [ RunTime:0.016001s ]
+
+[ 2016-11-29T15:03:16+08:00 ] 127.0.0.1 /user/Jpush/index
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+INFO: [ action_begin ] --START--
+SQL: SHOW COLUMNS FROM `gms_hooks` [ RunTime:0.0020s ]
+SQL: SELECT `name`,`addons` FROM `gms_hooks`  [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `gms_addons` [ RunTime:0.0020s ]
+SQL: SELECT `id`,`name` FROM `gms_addons` WHERE `disabled` = 1 AND `name` IN ('SiteStat')  [ RunTime:0.0000s ]
+INFO: Run Common\Behavior\InitHookBehavior [ RunTime:0.015001s ]
+INFO: [ action_begin ] --END-- [ RunTime:0.015001s ]
+
+[ 2016-11-29T15:08:21+08:00 ] 127.0.0.1 /user/Jpush/index
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+INFO: [ action_begin ] --START--
+SQL: SHOW COLUMNS FROM `gms_hooks` [ RunTime:0.0020s ]
+SQL: SELECT `name`,`addons` FROM `gms_hooks`  [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `gms_addons` [ RunTime:0.0020s ]
+SQL: SELECT `id`,`name` FROM `gms_addons` WHERE `disabled` = 1 AND `name` IN ('SiteStat')  [ RunTime:0.0000s ]
+INFO: Run Common\Behavior\InitHookBehavior [ RunTime:0.015001s ]
+INFO: [ action_begin ] --END-- [ RunTime:0.017001s ]
+
+[ 2016-11-29T15:08:31+08:00 ] 127.0.0.1 /user/Jpush/index
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+INFO: [ action_begin ] --START--
+SQL: SHOW COLUMNS FROM `gms_hooks` [ RunTime:0.0030s ]
+SQL: SELECT `name`,`addons` FROM `gms_hooks`  [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `gms_addons` [ RunTime:0.0030s ]
+SQL: SELECT `id`,`name` FROM `gms_addons` WHERE `disabled` = 1 AND `name` IN ('SiteStat')  [ RunTime:0.0000s ]
+INFO: Run Common\Behavior\InitHookBehavior [ RunTime:0.015001s ]
+INFO: [ action_begin ] --END-- [ RunTime:0.015001s ]
+
+[ 2016-11-29T15:08:39+08:00 ] 127.0.0.1 /user/Jpush/index
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+INFO: [ action_begin ] --START--
+SQL: SHOW COLUMNS FROM `gms_hooks` [ RunTime:0.0020s ]
+SQL: SELECT `name`,`addons` FROM `gms_hooks`  [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `gms_addons` [ RunTime:0.0020s ]
+SQL: SELECT `id`,`name` FROM `gms_addons` WHERE `disabled` = 1 AND `name` IN ('SiteStat')  [ RunTime:0.0000s ]
+INFO: Run Common\Behavior\InitHookBehavior [ RunTime:0.015001s ]
+INFO: [ action_begin ] --END-- [ RunTime:0.015001s ]
+
+[ 2016-11-29T15:11:48+08:00 ] 127.0.0.1 /user/Jpush/index
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.001000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+INFO: [ action_begin ] --START--
+SQL: SHOW COLUMNS FROM `gms_hooks` [ RunTime:0.0030s ]
+SQL: SELECT `name`,`addons` FROM `gms_hooks`  [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `gms_addons` [ RunTime:0.0030s ]
+SQL: SELECT `id`,`name` FROM `gms_addons` WHERE `disabled` = 1 AND `name` IN ('SiteStat')  [ RunTime:0.0000s ]
+INFO: Run Common\Behavior\InitHookBehavior [ RunTime:0.016001s ]
+INFO: [ action_begin ] --END-- [ RunTime:0.016001s ]
+
+[ 2016-11-29T15:13:29+08:00 ] 127.0.0.1 /user/Jpush/index
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+INFO: [ action_begin ] --START--
+SQL: SHOW COLUMNS FROM `gms_hooks` [ RunTime:0.0030s ]
+SQL: SELECT `name`,`addons` FROM `gms_hooks`  [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `gms_addons` [ RunTime:0.0030s ]
+SQL: SELECT `id`,`name` FROM `gms_addons` WHERE `disabled` = 1 AND `name` IN ('SiteStat')  [ RunTime:0.0000s ]
+INFO: Run Common\Behavior\InitHookBehavior [ RunTime:0.015001s ]
+INFO: [ action_begin ] --END-- [ RunTime:0.016001s ]
+
+[ 2016-11-29T15:16:54+08:00 ] 127.0.0.1 /user/Jpush/index
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+INFO: [ action_begin ] --START--
+SQL: SHOW COLUMNS FROM `gms_hooks` [ RunTime:0.0030s ]
+SQL: SELECT `name`,`addons` FROM `gms_hooks`  [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `gms_addons` [ RunTime:0.0030s ]
+SQL: SELECT `id`,`name` FROM `gms_addons` WHERE `disabled` = 1 AND `name` IN ('SiteStat')  [ RunTime:0.0000s ]
+INFO: Run Common\Behavior\InitHookBehavior [ RunTime:0.016001s ]
+INFO: [ action_begin ] --END-- [ RunTime:0.016001s ]
+
+[ 2016-11-29T15:19:10+08:00 ] 127.0.0.1 /user/Jpush/index
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+INFO: [ action_begin ] --START--
+SQL: SHOW COLUMNS FROM `gms_hooks` [ RunTime:0.0030s ]
+SQL: SELECT `name`,`addons` FROM `gms_hooks`  [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `gms_addons` [ RunTime:0.0030s ]
+SQL: SELECT `id`,`name` FROM `gms_addons` WHERE `disabled` = 1 AND `name` IN ('SiteStat')  [ RunTime:0.0000s ]
+INFO: Run Common\Behavior\InitHookBehavior [ RunTime:0.016001s ]
+INFO: [ action_begin ] --END-- [ RunTime:0.016001s ]
+
+[ 2016-11-29T15:20:32+08:00 ] 127.0.0.1 /user/Jpush/index
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+INFO: [ action_begin ] --START--
+SQL: SHOW COLUMNS FROM `gms_hooks` [ RunTime:0.0030s ]
+SQL: SELECT `name`,`addons` FROM `gms_hooks`  [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `gms_addons` [ RunTime:0.0030s ]
+SQL: SELECT `id`,`name` FROM `gms_addons` WHERE `disabled` = 1 AND `name` IN ('SiteStat')  [ RunTime:0.0000s ]
+INFO: Run Common\Behavior\InitHookBehavior [ RunTime:0.016001s ]
+INFO: [ action_begin ] --END-- [ RunTime:0.016001s ]
+
+[ 2016-11-29T15:20:34+08:00 ] 127.0.0.1 /user/Jpush/index
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+INFO: [ action_begin ] --START--
+SQL: SHOW COLUMNS FROM `gms_hooks` [ RunTime:0.0030s ]
+SQL: SELECT `name`,`addons` FROM `gms_hooks`  [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `gms_addons` [ RunTime:0.0030s ]
+SQL: SELECT `id`,`name` FROM `gms_addons` WHERE `disabled` = 1 AND `name` IN ('SiteStat')  [ RunTime:0.0000s ]
+INFO: Run Common\Behavior\InitHookBehavior [ RunTime:0.017001s ]
+INFO: [ action_begin ] --END-- [ RunTime:0.017001s ]
+
+[ 2016-11-29T15:20:34+08:00 ] 127.0.0.1 /user/Jpush/index
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+INFO: [ action_begin ] --START--
+SQL: SHOW COLUMNS FROM `gms_hooks` [ RunTime:0.0030s ]
+SQL: SELECT `name`,`addons` FROM `gms_hooks`  [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `gms_addons` [ RunTime:0.0030s ]
+SQL: SELECT `id`,`name` FROM `gms_addons` WHERE `disabled` = 1 AND `name` IN ('SiteStat')  [ RunTime:0.0010s ]
+INFO: Run Common\Behavior\InitHookBehavior [ RunTime:0.016001s ]
+INFO: [ action_begin ] --END-- [ RunTime:0.016001s ]
+
+[ 2016-11-29T15:20:34+08:00 ] 127.0.0.1 /user/Jpush/index
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+INFO: [ action_begin ] --START--
+SQL: SHOW COLUMNS FROM `gms_hooks` [ RunTime:0.0030s ]
+SQL: SELECT `name`,`addons` FROM `gms_hooks`  [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `gms_addons` [ RunTime:0.0020s ]
+SQL: SELECT `id`,`name` FROM `gms_addons` WHERE `disabled` = 1 AND `name` IN ('SiteStat')  [ RunTime:0.0000s ]
+INFO: Run Common\Behavior\InitHookBehavior [ RunTime:0.015001s ]
+INFO: [ action_begin ] --END-- [ RunTime:0.015001s ]
+
+[ 2016-11-29T15:22:21+08:00 ] 127.0.0.1 /user/Jpush/index
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001001s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+INFO: [ action_begin ] --START--
+SQL: SHOW COLUMNS FROM `gms_hooks` [ RunTime:0.0030s ]
+SQL: SELECT `name`,`addons` FROM `gms_hooks`  [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `gms_addons` [ RunTime:0.0030s ]
+SQL: SELECT `id`,`name` FROM `gms_addons` WHERE `disabled` = 1 AND `name` IN ('SiteStat')  [ RunTime:0.0000s ]
+INFO: Run Common\Behavior\InitHookBehavior [ RunTime:0.016001s ]
+INFO: [ action_begin ] --END-- [ RunTime:0.016001s ]
+
+[ 2016-11-29T15:22:50+08:00 ] 127.0.0.1 /user/Jpush/index
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+INFO: [ action_begin ] --START--
+SQL: SHOW COLUMNS FROM `gms_hooks` [ RunTime:0.0030s ]
+SQL: SELECT `name`,`addons` FROM `gms_hooks`  [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `gms_addons` [ RunTime:0.0030s ]
+SQL: SELECT `id`,`name` FROM `gms_addons` WHERE `disabled` = 1 AND `name` IN ('SiteStat')  [ RunTime:0.0000s ]
+INFO: Run Common\Behavior\InitHookBehavior [ RunTime:0.015001s ]
+INFO: [ action_begin ] --END-- [ RunTime:0.015001s ]
+
+[ 2016-11-29T15:22:56+08:00 ] 127.0.0.1 /user/Jpush/index
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001001s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+INFO: [ action_begin ] --START--
+SQL: SHOW COLUMNS FROM `gms_hooks` [ RunTime:0.0030s ]
+SQL: SELECT `name`,`addons` FROM `gms_hooks`  [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `gms_addons` [ RunTime:0.0030s ]
+SQL: SELECT `id`,`name` FROM `gms_addons` WHERE `disabled` = 1 AND `name` IN ('SiteStat')  [ RunTime:0.0000s ]
+INFO: Run Common\Behavior\InitHookBehavior [ RunTime:0.015001s ]
+INFO: [ action_begin ] --END-- [ RunTime:0.015001s ]
+
+[ 2016-11-29T15:23:32+08:00 ] 127.0.0.1 /user/Jpush/index
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+INFO: [ action_begin ] --START--
+SQL: SHOW COLUMNS FROM `gms_hooks` [ RunTime:0.0030s ]
+SQL: SELECT `name`,`addons` FROM `gms_hooks`  [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `gms_addons` [ RunTime:0.0030s ]
+SQL: SELECT `id`,`name` FROM `gms_addons` WHERE `disabled` = 1 AND `name` IN ('SiteStat')  [ RunTime:0.0000s ]
+INFO: Run Common\Behavior\InitHookBehavior [ RunTime:0.016001s ]
+INFO: [ action_begin ] --END-- [ RunTime:0.016001s ]
+
+[ 2016-11-29T15:23:53+08:00 ] 127.0.0.1 /user/Jpush/index
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001001s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001001s ]
+INFO: [ action_begin ] --START--
+SQL: SHOW COLUMNS FROM `gms_hooks` [ RunTime:0.0030s ]
+SQL: SELECT `name`,`addons` FROM `gms_hooks`  [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `gms_addons` [ RunTime:0.0030s ]
+SQL: SELECT `id`,`name` FROM `gms_addons` WHERE `disabled` = 1 AND `name` IN ('SiteStat')  [ RunTime:0.0000s ]
+INFO: Run Common\Behavior\InitHookBehavior [ RunTime:0.016000s ]
+INFO: [ action_begin ] --END-- [ RunTime:0.016000s ]
+
+[ 2016-11-29T15:23:53+08:00 ] 127.0.0.1 /user/Jpush/index
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+INFO: [ action_begin ] --START--
+SQL: SHOW COLUMNS FROM `gms_hooks` [ RunTime:0.0030s ]
+SQL: SELECT `name`,`addons` FROM `gms_hooks`  [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `gms_addons` [ RunTime:0.0030s ]
+SQL: SELECT `id`,`name` FROM `gms_addons` WHERE `disabled` = 1 AND `name` IN ('SiteStat')  [ RunTime:0.0000s ]
+INFO: Run Common\Behavior\InitHookBehavior [ RunTime:0.015001s ]
+INFO: [ action_begin ] --END-- [ RunTime:0.015001s ]
+
+[ 2016-11-29T15:23:54+08:00 ] 127.0.0.1 /user/Jpush/index
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+INFO: [ action_begin ] --START--
+SQL: SHOW COLUMNS FROM `gms_hooks` [ RunTime:0.0030s ]
+SQL: SELECT `name`,`addons` FROM `gms_hooks`  [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `gms_addons` [ RunTime:0.0030s ]
+SQL: SELECT `id`,`name` FROM `gms_addons` WHERE `disabled` = 1 AND `name` IN ('SiteStat')  [ RunTime:0.0000s ]
+INFO: Run Common\Behavior\InitHookBehavior [ RunTime:0.016000s ]
+INFO: [ action_begin ] --END-- [ RunTime:0.016000s ]
+
+[ 2016-11-29T15:23:54+08:00 ] 127.0.0.1 /user/Jpush/index
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+INFO: [ action_begin ] --START--
+SQL: SHOW COLUMNS FROM `gms_hooks` [ RunTime:0.0030s ]
+SQL: SELECT `name`,`addons` FROM `gms_hooks`  [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `gms_addons` [ RunTime:0.0030s ]
+SQL: SELECT `id`,`name` FROM `gms_addons` WHERE `disabled` = 1 AND `name` IN ('SiteStat')  [ RunTime:0.0000s ]
+INFO: Run Common\Behavior\InitHookBehavior [ RunTime:0.016001s ]
+INFO: [ action_begin ] --END-- [ RunTime:0.016001s ]
+
+[ 2016-11-29T15:23:54+08:00 ] 127.0.0.1 /user/Jpush/index
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+INFO: [ action_begin ] --START--
+SQL: SHOW COLUMNS FROM `gms_hooks` [ RunTime:0.0030s ]
+SQL: SELECT `name`,`addons` FROM `gms_hooks`  [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `gms_addons` [ RunTime:0.0030s ]
+SQL: SELECT `id`,`name` FROM `gms_addons` WHERE `disabled` = 1 AND `name` IN ('SiteStat')  [ RunTime:0.0000s ]
+INFO: Run Common\Behavior\InitHookBehavior [ RunTime:0.016001s ]
+INFO: [ action_begin ] --END-- [ RunTime:0.016001s ]
+
+[ 2016-11-29T15:30:22+08:00 ] 127.0.0.1 /user/Jpush/index
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+
+[ 2016-11-29T15:31:02+08:00 ] 127.0.0.1 /user/Jpush/index
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001001s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001001s ]
+
+[ 2016-11-29T15:33:07+08:00 ] 127.0.0.1 /user/Jpush/index
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+
+[ 2016-11-29T15:33:08+08:00 ] 127.0.0.1 /user/Jpush/index
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+
+[ 2016-11-29T15:33:13+08:00 ] 127.0.0.1 /user/Jpush/index
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+INFO: [ action_begin ] --START--
+SQL: SHOW COLUMNS FROM `gms_hooks` [ RunTime:0.0030s ]
+SQL: SELECT `name`,`addons` FROM `gms_hooks`  [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `gms_addons` [ RunTime:0.0030s ]
+SQL: SELECT `id`,`name` FROM `gms_addons` WHERE `disabled` = 1 AND `name` IN ('SiteStat')  [ RunTime:0.0000s ]
+INFO: Run Common\Behavior\InitHookBehavior [ RunTime:0.016000s ]
+INFO: [ action_begin ] --END-- [ RunTime:0.016000s ]
+
+[ 2016-11-29T15:33:25+08:00 ] 127.0.0.1 /user/Jpush/index
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+INFO: [ action_begin ] --START--
+SQL: SHOW COLUMNS FROM `gms_hooks` [ RunTime:0.0030s ]
+SQL: SELECT `name`,`addons` FROM `gms_hooks`  [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `gms_addons` [ RunTime:0.0030s ]
+SQL: SELECT `id`,`name` FROM `gms_addons` WHERE `disabled` = 1 AND `name` IN ('SiteStat')  [ RunTime:0.0000s ]
+INFO: Run Common\Behavior\InitHookBehavior [ RunTime:0.015001s ]
+INFO: [ action_begin ] --END-- [ RunTime:0.015001s ]
+
+[ 2016-11-29T15:33:25+08:00 ] 127.0.0.1 /user/Jpush/index
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+INFO: [ action_begin ] --START--
+SQL: SHOW COLUMNS FROM `gms_hooks` [ RunTime:0.0030s ]
+SQL: SELECT `name`,`addons` FROM `gms_hooks`  [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `gms_addons` [ RunTime:0.0030s ]
+SQL: SELECT `id`,`name` FROM `gms_addons` WHERE `disabled` = 1 AND `name` IN ('SiteStat')  [ RunTime:0.0000s ]
+INFO: Run Common\Behavior\InitHookBehavior [ RunTime:0.025002s ]
+INFO: [ action_begin ] --END-- [ RunTime:0.026002s ]
+
+[ 2016-11-29T15:33:26+08:00 ] 127.0.0.1 /user/Jpush/index
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+INFO: [ action_begin ] --START--
+SQL: SHOW COLUMNS FROM `gms_hooks` [ RunTime:0.0030s ]
+SQL: SELECT `name`,`addons` FROM `gms_hooks`  [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `gms_addons` [ RunTime:0.0030s ]
+SQL: SELECT `id`,`name` FROM `gms_addons` WHERE `disabled` = 1 AND `name` IN ('SiteStat')  [ RunTime:0.0000s ]
+INFO: Run Common\Behavior\InitHookBehavior [ RunTime:0.015001s ]
+INFO: [ action_begin ] --END-- [ RunTime:0.015001s ]
+
+[ 2016-11-29T15:33:26+08:00 ] 127.0.0.1 /user/Jpush/index
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+INFO: [ action_begin ] --START--
+SQL: SHOW COLUMNS FROM `gms_hooks` [ RunTime:0.0030s ]
+SQL: SELECT `name`,`addons` FROM `gms_hooks`  [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `gms_addons` [ RunTime:0.0030s ]
+SQL: SELECT `id`,`name` FROM `gms_addons` WHERE `disabled` = 1 AND `name` IN ('SiteStat')  [ RunTime:0.0000s ]
+INFO: Run Common\Behavior\InitHookBehavior [ RunTime:0.015001s ]
+INFO: [ action_begin ] --END-- [ RunTime:0.015001s ]
+
+[ 2016-11-29T15:33:39+08:00 ] 127.0.0.1 /user/Jpush/index
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+INFO: [ action_begin ] --START--
+SQL: SHOW COLUMNS FROM `gms_hooks` [ RunTime:0.0020s ]
+SQL: SELECT `name`,`addons` FROM `gms_hooks`  [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `gms_addons` [ RunTime:0.0020s ]
+SQL: SELECT `id`,`name` FROM `gms_addons` WHERE `disabled` = 1 AND `name` IN ('SiteStat')  [ RunTime:0.0000s ]
+INFO: Run Common\Behavior\InitHookBehavior [ RunTime:0.015001s ]
+INFO: [ action_begin ] --END-- [ RunTime:0.015001s ]
+
+[ 2016-11-29T15:34:31+08:00 ] 127.0.0.1 /user/Jpush/index
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+INFO: [ action_begin ] --START--
+SQL: SHOW COLUMNS FROM `gms_hooks` [ RunTime:0.0020s ]
+SQL: SELECT `name`,`addons` FROM `gms_hooks`  [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `gms_addons` [ RunTime:0.0030s ]
+SQL: SELECT `id`,`name` FROM `gms_addons` WHERE `disabled` = 1 AND `name` IN ('SiteStat')  [ RunTime:0.0000s ]
+INFO: Run Common\Behavior\InitHookBehavior [ RunTime:0.026002s ]
+INFO: [ action_begin ] --END-- [ RunTime:0.026002s ]
+
+[ 2016-11-29T15:34:32+08:00 ] 127.0.0.1 /user/Jpush/index
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+INFO: [ action_begin ] --START--
+SQL: SHOW COLUMNS FROM `gms_hooks` [ RunTime:0.0030s ]
+SQL: SELECT `name`,`addons` FROM `gms_hooks`  [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `gms_addons` [ RunTime:0.0020s ]
+SQL: SELECT `id`,`name` FROM `gms_addons` WHERE `disabled` = 1 AND `name` IN ('SiteStat')  [ RunTime:0.0010s ]
+INFO: Run Common\Behavior\InitHookBehavior [ RunTime:0.016001s ]
+INFO: [ action_begin ] --END-- [ RunTime:0.016001s ]
+
+[ 2016-11-29T15:34:32+08:00 ] 127.0.0.1 /user/Jpush/index
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+INFO: [ action_begin ] --START--
+SQL: SHOW COLUMNS FROM `gms_hooks` [ RunTime:0.0020s ]
+SQL: SELECT `name`,`addons` FROM `gms_hooks`  [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `gms_addons` [ RunTime:0.0020s ]
+SQL: SELECT `id`,`name` FROM `gms_addons` WHERE `disabled` = 1 AND `name` IN ('SiteStat')  [ RunTime:0.0010s ]
+INFO: Run Common\Behavior\InitHookBehavior [ RunTime:0.015001s ]
+INFO: [ action_begin ] --END-- [ RunTime:0.015001s ]
+
+[ 2016-11-29T15:34:32+08:00 ] 127.0.0.1 /user/Jpush/index
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+INFO: [ action_begin ] --START--
+SQL: SHOW COLUMNS FROM `gms_hooks` [ RunTime:0.0030s ]
+SQL: SELECT `name`,`addons` FROM `gms_hooks`  [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `gms_addons` [ RunTime:0.0030s ]
+SQL: SELECT `id`,`name` FROM `gms_addons` WHERE `disabled` = 1 AND `name` IN ('SiteStat')  [ RunTime:0.0000s ]
+INFO: Run Common\Behavior\InitHookBehavior [ RunTime:0.015001s ]
+INFO: [ action_begin ] --END-- [ RunTime:0.015001s ]
+
+[ 2016-11-29T15:35:37+08:00 ] 127.0.0.1 /user/Jpush/index
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+INFO: [ action_begin ] --START--
+SQL: SHOW COLUMNS FROM `gms_hooks` [ RunTime:0.0020s ]
+SQL: SELECT `name`,`addons` FROM `gms_hooks`  [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `gms_addons` [ RunTime:0.0020s ]
+SQL: SELECT `id`,`name` FROM `gms_addons` WHERE `disabled` = 1 AND `name` IN ('SiteStat')  [ RunTime:0.0000s ]
+INFO: Run Common\Behavior\InitHookBehavior [ RunTime:0.024001s ]
+INFO: [ action_begin ] --END-- [ RunTime:0.024001s ]
+
+[ 2016-11-29T15:35:44+08:00 ] 127.0.0.1 /user/Jpush/index
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+INFO: [ action_begin ] --START--
+SQL: SHOW COLUMNS FROM `gms_hooks` [ RunTime:0.0030s ]
+SQL: SELECT `name`,`addons` FROM `gms_hooks`  [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `gms_addons` [ RunTime:0.0030s ]
+SQL: SELECT `id`,`name` FROM `gms_addons` WHERE `disabled` = 1 AND `name` IN ('SiteStat')  [ RunTime:0.0000s ]
+INFO: Run Common\Behavior\InitHookBehavior [ RunTime:0.015001s ]
+INFO: [ action_begin ] --END-- [ RunTime:0.015001s ]
+
+[ 2016-11-29T15:36:05+08:00 ] 127.0.0.1 /user/Jpush/index
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+INFO: [ action_begin ] --START--
+SQL: SHOW COLUMNS FROM `gms_hooks` [ RunTime:0.0030s ]
+SQL: SELECT `name`,`addons` FROM `gms_hooks`  [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `gms_addons` [ RunTime:0.0020s ]
+SQL: SELECT `id`,`name` FROM `gms_addons` WHERE `disabled` = 1 AND `name` IN ('SiteStat')  [ RunTime:0.0000s ]
+INFO: Run Common\Behavior\InitHookBehavior [ RunTime:0.015000s ]
+INFO: [ action_begin ] --END-- [ RunTime:0.015000s ]
+

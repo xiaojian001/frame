@@ -1,0 +1,118 @@
+<extend name="Public/base"/><block name="body"><div class="fixed-bar" id="User_Bar">
+	<div class="item-title">
+		<h3>用户</h3>
+		<ul class="tab-base">
+			<li><a class="current" href="JavaScript:void(0);" onclick="Data_Reload('User_Data_List');"><span>列表</span></a></li>
+			<li><a href="JavaScript:void(0);" onclick="Data_Search('User_Search_From','User_Data_List');"><span>搜索</span></a></li>
+		</ul>
+	</div>
+</div>
+<div style="display: none">
+<form id="User_Form" class="update_from"></form>
+  <form id="User_Search_From" class="search_from">
+	<table border="0" cellpadding="0" cellspacing="0" style="width:100%">
+    <tr>
+			<th>电话号码 : </th>
+			<td><input name="s_phone" type="text" class="easyui-textbox" style="height:30px;"></td>
+		</tr> </table>
+  </form>
+</div>
+
+<table id="User_Data_List"></table>
+
+<script type="text/javascript">
+$(function() {
+    $("#User_Data_List").datagrid({
+        url: "{:U('MemberAccountLog/index')}",
+        fit: true,
+        striped: true,
+        border: false,
+        pagination: true,
+        pageSize: 20,
+        pageList: [10, 20, 50],
+        pageNumber: 1,
+        sortName: 'id',
+        sortOrder: 'desc',
+        toolbar: '#User_Bar',
+        singleSelect: true,
+        columns: [[{
+            field: 'id',
+            title: 'ID',
+            align:'center',
+            width: 40,
+            sortable: true
+        },
+        {
+            field: "nickname",
+            title: "昵称",
+            align:'center',
+            width: 100,
+            sortable: true
+        },
+            {
+                field: "money",
+                title: "变化金额",
+                align:'center',
+                width: 200,
+                sortable: true
+            },{
+                field: "type",
+                title: "变化类型",
+                align:'center',
+                width: 150,
+                sortable: true,
+                formatter: function(value, row, index) {
+                    var op_status = new Array()
+                    op_status["0"] = "服务费支出"
+                    return op_status[value];
+                }
+            },{
+                field: "payment",
+                title: "变化方式",
+                align:'center',
+                width: 150,
+                sortable: true,
+                formatter: function(value, row, index) {
+                    var op_status = new Array()
+                    op_status["1"] = "收入"
+                    op_status["2"] = "支出"
+                    op_status["3"] = "锁定"
+                    op_status["4"] = "解锁"
+                    return op_status[value];
+                }
+            },
+            {
+                field: "type_info",
+                title: "类型描述",
+                align:'center',
+                width: 200,
+                sortable: true
+            },
+            {
+                field: "content",
+                title: "备注",
+                align:'center',
+                width: 200,
+                sortable: true
+            },
+            {
+                field: "b_id",
+                title: "业务编号",
+                align:'center',
+                width: 80,
+                sortable: true
+            },{
+                field: "add_time",
+                title: "记录时间",
+                align:'center',
+                width: 150,
+                sortable: true,
+                formatter: function(value, row, index) {
+                    return u_to_ymdhis(value)
+                }
+            }
+		]]
+	});
+})
+</script>
+</block>

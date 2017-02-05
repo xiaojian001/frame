@@ -1,0 +1,142 @@
+<extend name="Public/base"/><block name="body"><div class="fixed-bar" id="User_Bar">
+	<div class="item-title">
+		<h3>用户</h3>
+		<ul class="tab-base">
+			<li><a class="current" href="JavaScript:void(0);" onclick="Data_Reload('User_Data_List');"><span>列表</span></a></li>
+			<li><a href="JavaScript:void(0);" onclick="Data_Search('User_Search_From','User_Data_List');"><span>搜索</span></a></li>
+		</ul>
+	</div>
+</div>
+
+<div style="display: none">
+<form id="User_Form" class="update_from"></form>
+  <form id="User_Search_From" class="search_from">
+	<table border="0" cellpadding="0" cellspacing="0" style="width:100%">
+         <tr>
+			<th>姓名: </th>
+			<td><input name="s_real_name" type="text" class="easyui-textbox" style="height:30px;"></td>
+		</tr><tr>
+			<th>电话号码: </th>
+			<td><input name="s_phone" type="text" class="easyui-textbox" style="height:30px;"></td>
+		</tr>
+        <tr>
+			<th>卡号: </th>
+			<td><input name="s_account" type="text" class="easyui-textbox" style="height:30px;"></td>
+		</tr>
+        <tr>
+			<th>所属银行: </th>
+			<td><input name="s_bank_name" type="text" class="easyui-textbox" style="height:30px;"></td>
+		</tr>
+
+        <tr>
+			<th>状态 : </th>
+			<td>
+                <select name="s_status" class="easyui-combobox" style="height:30px;" data-options="valueField: 'value',
+		textField: 'text',
+		data: [{
+			text: '认证中',
+			value: '0'
+		},{
+			text: '认证成功',
+			value: '1'
+		},{
+			text: '已删除',
+			value: '2'
+		}]"></select>
+            </td>
+		</tr>
+    </table>
+  </form>
+</div>
+
+<table id="User_Data_List"></table>
+
+<script type="text/javascript">
+$(function() {
+    $("#User_Data_List").datagrid({
+        url: "{:U('MemberBank/index')}",
+        fit: true,
+        striped: true,
+        border: false,
+        pagination: true,
+        pageSize: 20,
+        pageList: [10, 20, 50],
+        pageNumber: 1,
+        sortName: 'id',
+        sortOrder: 'desc',
+        toolbar: '#User_Bar',
+        singleSelect: true,
+        columns: [[{
+            field: 'id',
+            title: 'ID',
+            align:'center',
+            width: 40,
+            sortable: true
+        },
+        {
+            field: "phone",
+            title: "电话号码",
+            align:'center',
+            width: 100,
+            sortable: true
+        },{
+            field: "nickname",
+            title: "客户名称",
+            align:'center',
+            width: 100,
+            sortable: true
+        }, {
+                field: "account",
+                title: "银行卡账户",
+                align:'center',
+                width: 150,
+                sortable: true
+            },
+            {
+                field: "bank_name",
+                title: "所属银行",
+                align:'center',
+                width: 150,
+                sortable: true
+            },
+            {
+                field: "add_time",
+                title: "添加时间",
+                align:'center',
+                width: 150,
+                sortable: true,
+                formatter: function(value, row, index) {
+                    return u_to_ymdhis(value)
+                }
+            },
+            {
+                field: "status",
+                title: "状态",
+                align:'center',
+                width: 80,
+                sortable: true,
+                formatter: function(value, row, index) {
+                    var op_status = new Array()
+                    op_status["0"] = "认证中"
+                    op_status["1"] = "认证成功"
+                    op_status["2"] = "已删除"
+                    return op_status[value];
+                }
+            },
+            {
+                field: "operate",
+                title: "操作",
+                align:'center',
+                width: 100,
+                formatter: function(value, row, index) {
+                    operate_menu = '';
+                    <if condition="Is_Auth('Admin/MemberBank/del')">
+                    operate_menu = operate_menu+" <a href='#' onclick=Data_Remove('<?php echo U('del'); ?>&id=" + row.id + "','User_Data_List') >删除</a>";
+                    </if>
+                    return operate_menu;
+                    }}
+		]]
+	});
+})
+</script>
+</block>

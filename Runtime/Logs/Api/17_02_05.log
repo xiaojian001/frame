@@ -1,0 +1,297 @@
+[ 2017-02-05T15:16:43+08:00 ] 127.0.0.1 /api/index/index
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+INFO: [ action_begin ] --START--
+SQL: SHOW COLUMNS FROM `gms_hooks` [ RunTime:0.0030s ]
+SQL: SELECT `name`,`addons` FROM `gms_hooks`  [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `gms_addons` [ RunTime:0.0030s ]
+SQL: SELECT `id`,`name` FROM `gms_addons` WHERE `disabled` = 1 AND `name` IN ('SiteStat')  [ RunTime:0.0000s ]
+INFO: Run Common\Behavior\InitHookBehavior [ RunTime:0.014000s ]
+INFO: [ action_begin ] --END-- [ RunTime:0.014000s ]
+
+[ 2017-02-05T15:35:24+08:00 ] 127.0.0.1 /api/rsa/index
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+INFO: [ action_begin ] --START--
+SQL: SHOW COLUMNS FROM `gms_hooks` [ RunTime:0.0020s ]
+SQL: SELECT `name`,`addons` FROM `gms_hooks`  [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `gms_addons` [ RunTime:0.0030s ]
+SQL: SELECT `id`,`name` FROM `gms_addons` WHERE `disabled` = 1 AND `name` IN ('SiteStat')  [ RunTime:0.0000s ]
+INFO: Run Common\Behavior\InitHookBehavior [ RunTime:0.015001s ]
+INFO: [ action_begin ] --END-- [ RunTime:0.015001s ]
+
+[ 2017-02-05T15:37:42+08:00 ] 127.0.0.1 /api/rsa/index
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+INFO: [ action_begin ] --START--
+SQL: SHOW COLUMNS FROM `gms_hooks` [ RunTime:0.0020s ]
+SQL: SELECT `name`,`addons` FROM `gms_hooks`  [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `gms_addons` [ RunTime:0.0020s ]
+SQL: SELECT `id`,`name` FROM `gms_addons` WHERE `disabled` = 1 AND `name` IN ('SiteStat')  [ RunTime:0.0000s ]
+INFO: Run Common\Behavior\InitHookBehavior [ RunTime:0.015001s ]
+INFO: [ action_begin ] --END-- [ RunTime:0.015001s ]
+
+[ 2017-02-05T15:46:02+08:00 ] 127.0.0.1 /api/rsa/index
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+INFO: [ action_begin ] --START--
+SQL: SHOW COLUMNS FROM `gms_hooks` [ RunTime:0.0020s ]
+SQL: SELECT `name`,`addons` FROM `gms_hooks`  [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `gms_addons` [ RunTime:0.0030s ]
+SQL: SELECT `id`,`name` FROM `gms_addons` WHERE `disabled` = 1 AND `name` IN ('SiteStat')  [ RunTime:0.0010s ]
+INFO: Run Common\Behavior\InitHookBehavior [ RunTime:0.015001s ]
+INFO: [ action_begin ] --END-- [ RunTime:0.015001s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2017-02-05T15:47:57+08:00 ] 127.0.0.1 /api/rsa/index
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+INFO: [ action_begin ] --START--
+SQL: SHOW COLUMNS FROM `gms_hooks` [ RunTime:0.0020s ]
+SQL: SELECT `name`,`addons` FROM `gms_hooks`  [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `gms_addons` [ RunTime:0.0030s ]
+SQL: SELECT `id`,`name` FROM `gms_addons` WHERE `disabled` = 1 AND `name` IN ('SiteStat')  [ RunTime:0.0000s ]
+INFO: Run Common\Behavior\InitHookBehavior [ RunTime:0.015000s ]
+INFO: [ action_begin ] --END-- [ RunTime:0.015000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000000s ]
+
+[ 2017-02-05T15:48:20+08:00 ] 127.0.0.1 /api/rsa/index
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+INFO: [ action_begin ] --START--
+SQL: SHOW COLUMNS FROM `gms_hooks` [ RunTime:0.0030s ]
+SQL: SELECT `name`,`addons` FROM `gms_hooks`  [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `gms_addons` [ RunTime:0.0020s ]
+SQL: SELECT `id`,`name` FROM `gms_addons` WHERE `disabled` = 1 AND `name` IN ('SiteStat')  [ RunTime:0.0010s ]
+INFO: Run Common\Behavior\InitHookBehavior [ RunTime:0.015001s ]
+INFO: [ action_begin ] --END-- [ RunTime:0.015001s ]
+
+[ 2017-02-05T15:50:29+08:00 ] 127.0.0.1 /api/rsa/index
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+INFO: [ action_begin ] --START--
+SQL: SHOW COLUMNS FROM `gms_hooks` [ RunTime:0.0030s ]
+SQL: SELECT `name`,`addons` FROM `gms_hooks`  [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `gms_addons` [ RunTime:0.0030s ]
+SQL: SELECT `id`,`name` FROM `gms_addons` WHERE `disabled` = 1 AND `name` IN ('SiteStat')  [ RunTime:0.0000s ]
+INFO: Run Common\Behavior\InitHookBehavior [ RunTime:0.014000s ]
+INFO: [ action_begin ] --END-- [ RunTime:0.014000s ]
+
+[ 2017-02-05T15:50:42+08:00 ] 127.0.0.1 /api/rsa/index
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+INFO: [ action_begin ] --START--
+SQL: SHOW COLUMNS FROM `gms_hooks` [ RunTime:0.0030s ]
+SQL: SELECT `name`,`addons` FROM `gms_hooks`  [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `gms_addons` [ RunTime:0.0020s ]
+SQL: SELECT `id`,`name` FROM `gms_addons` WHERE `disabled` = 1 AND `name` IN ('SiteStat')  [ RunTime:0.0000s ]
+INFO: Run Common\Behavior\InitHookBehavior [ RunTime:0.015001s ]
+INFO: [ action_begin ] --END-- [ RunTime:0.015001s ]
+
+[ 2017-02-05T15:51:01+08:00 ] 127.0.0.1 /api/rsa/index
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+INFO: [ action_begin ] --START--
+SQL: SHOW COLUMNS FROM `gms_hooks` [ RunTime:0.0030s ]
+SQL: SELECT `name`,`addons` FROM `gms_hooks`  [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `gms_addons` [ RunTime:0.0020s ]
+SQL: SELECT `id`,`name` FROM `gms_addons` WHERE `disabled` = 1 AND `name` IN ('SiteStat')  [ RunTime:0.0010s ]
+INFO: Run Common\Behavior\InitHookBehavior [ RunTime:0.015001s ]
+INFO: [ action_begin ] --END-- [ RunTime:0.015001s ]
+
+[ 2017-02-05T15:51:26+08:00 ] 127.0.0.1 /api/rsa/index
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+INFO: [ action_begin ] --START--
+SQL: SHOW COLUMNS FROM `gms_hooks` [ RunTime:0.0020s ]
+SQL: SELECT `name`,`addons` FROM `gms_hooks`  [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `gms_addons` [ RunTime:0.0020s ]
+SQL: SELECT `id`,`name` FROM `gms_addons` WHERE `disabled` = 1 AND `name` IN ('SiteStat')  [ RunTime:0.0000s ]
+INFO: Run Common\Behavior\InitHookBehavior [ RunTime:0.015001s ]
+INFO: [ action_begin ] --END-- [ RunTime:0.015001s ]
+
+[ 2017-02-05T15:51:27+08:00 ] 127.0.0.1 /api/rsa/index
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+INFO: [ action_begin ] --START--
+SQL: SHOW COLUMNS FROM `gms_hooks` [ RunTime:0.0020s ]
+SQL: SELECT `name`,`addons` FROM `gms_hooks`  [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `gms_addons` [ RunTime:0.0020s ]
+SQL: SELECT `id`,`name` FROM `gms_addons` WHERE `disabled` = 1 AND `name` IN ('SiteStat')  [ RunTime:0.0000s ]
+INFO: Run Common\Behavior\InitHookBehavior [ RunTime:0.014001s ]
+INFO: [ action_begin ] --END-- [ RunTime:0.014001s ]
+
+[ 2017-02-05T15:51:35+08:00 ] 127.0.0.1 /api/rsa/index
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+INFO: [ action_begin ] --START--
+SQL: SHOW COLUMNS FROM `gms_hooks` [ RunTime:0.0020s ]
+SQL: SELECT `name`,`addons` FROM `gms_hooks`  [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `gms_addons` [ RunTime:0.0020s ]
+SQL: SELECT `id`,`name` FROM `gms_addons` WHERE `disabled` = 1 AND `name` IN ('SiteStat')  [ RunTime:0.0010s ]
+INFO: Run Common\Behavior\InitHookBehavior [ RunTime:0.014000s ]
+INFO: [ action_begin ] --END-- [ RunTime:0.014000s ]
+
+[ 2017-02-05T15:51:55+08:00 ] 127.0.0.1 /api/rsa/index
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+INFO: [ action_begin ] --START--
+SQL: SHOW COLUMNS FROM `gms_hooks` [ RunTime:0.0030s ]
+SQL: SELECT `name`,`addons` FROM `gms_hooks`  [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `gms_addons` [ RunTime:0.0020s ]
+SQL: SELECT `id`,`name` FROM `gms_addons` WHERE `disabled` = 1 AND `name` IN ('SiteStat')  [ RunTime:0.0000s ]
+INFO: Run Common\Behavior\InitHookBehavior [ RunTime:0.015001s ]
+INFO: [ action_begin ] --END-- [ RunTime:0.015001s ]
+NOTIC: [2] Missing argument 1 for Api\Common\ApiServiceController::getParams(), called in D:\WWW\xiaojian\frame\App\Api\Controller\RsaController.class.php on line 8 and defined D:\WWW\xiaojian\frame\App\Api\Common\ApiServiceController.class.php 第 50 行.
+NOTIC: [8] Undefined variable: items D:\WWW\xiaojian\frame\App\Api\Common\ApiServiceController.class.php 第 53 行.
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2017-02-05T15:53:18+08:00 ] 127.0.0.1 /api/rsa/index
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+INFO: [ action_begin ] --START--
+SQL: SHOW COLUMNS FROM `gms_hooks` [ RunTime:0.0030s ]
+SQL: SELECT `name`,`addons` FROM `gms_hooks`  [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `gms_addons` [ RunTime:0.0020s ]
+SQL: SELECT `id`,`name` FROM `gms_addons` WHERE `disabled` = 1 AND `name` IN ('SiteStat')  [ RunTime:0.0000s ]
+INFO: Run Common\Behavior\InitHookBehavior [ RunTime:0.015001s ]
+INFO: [ action_begin ] --END-- [ RunTime:0.015001s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000000s ]
+
+[ 2017-02-05T15:56:40+08:00 ] 127.0.0.1 /api/rsa/index
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+NOTIC: [2048] Declaration of Api\Common\ApiServiceController::success() should be compatible with Think\Controller::success($message = '', $jumpUrl = '', $ajax = false) D:\WWW\xiaojian\frame\App\Api\Common\ApiServiceController.class.php 第 99 行.
+INFO: [ action_begin ] --START--
+SQL: SHOW COLUMNS FROM `gms_hooks` [ RunTime:0.0020s ]
+SQL: SELECT `name`,`addons` FROM `gms_hooks`  [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `gms_addons` [ RunTime:0.0020s ]
+SQL: SELECT `id`,`name` FROM `gms_addons` WHERE `disabled` = 1 AND `name` IN ('SiteStat')  [ RunTime:0.0010s ]
+INFO: Run Common\Behavior\InitHookBehavior [ RunTime:0.014000s ]
+INFO: [ action_begin ] --END-- [ RunTime:0.014000s ]
+NOTIC: [2] Missing argument 1 for Api\Common\ApiServiceController::success(), called in D:\WWW\xiaojian\frame\App\Api\Controller\RsaController.class.php on line 9 and defined D:\WWW\xiaojian\frame\App\Api\Common\ApiServiceController.class.php 第 33 行.
+NOTIC: [2] Missing argument 2 for Api\Common\ApiServiceController::success(), called in D:\WWW\xiaojian\frame\App\Api\Controller\RsaController.class.php on line 9 and defined D:\WWW\xiaojian\frame\App\Api\Common\ApiServiceController.class.php 第 33 行.
+NOTIC: [8] Undefined variable: message D:\WWW\xiaojian\frame\App\Api\Common\ApiServiceController.class.php 第 37 行.
+NOTIC: [8] Undefined variable: data D:\WWW\xiaojian\frame\App\Api\Common\ApiServiceController.class.php 第 38 行.
+
+[ 2017-02-05T15:56:57+08:00 ] 127.0.0.1 /api/rsa/index
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001001s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001001s ]
+NOTIC: [2048] Declaration of Api\Common\ApiServiceController::success() should be compatible with Think\Controller::success($message = '', $jumpUrl = '', $ajax = false) D:\WWW\xiaojian\frame\App\Api\Common\ApiServiceController.class.php 第 99 行.
+INFO: [ action_begin ] --START--
+SQL: SHOW COLUMNS FROM `gms_hooks` [ RunTime:0.0030s ]
+SQL: SELECT `name`,`addons` FROM `gms_hooks`  [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `gms_addons` [ RunTime:0.0030s ]
+SQL: SELECT `id`,`name` FROM `gms_addons` WHERE `disabled` = 1 AND `name` IN ('SiteStat')  [ RunTime:0.0000s ]
+INFO: Run Common\Behavior\InitHookBehavior [ RunTime:0.015000s ]
+INFO: [ action_begin ] --END-- [ RunTime:0.015000s ]
+NOTIC: [2] Missing argument 1 for Api\Common\ApiServiceController::success(), called in D:\WWW\xiaojian\frame\App\Api\Controller\RsaController.class.php on line 9 and defined D:\WWW\xiaojian\frame\App\Api\Common\ApiServiceController.class.php 第 33 行.
+NOTIC: [2] Missing argument 2 for Api\Common\ApiServiceController::success(), called in D:\WWW\xiaojian\frame\App\Api\Controller\RsaController.class.php on line 9 and defined D:\WWW\xiaojian\frame\App\Api\Common\ApiServiceController.class.php 第 33 行.
+NOTIC: [8] Undefined variable: message D:\WWW\xiaojian\frame\App\Api\Common\ApiServiceController.class.php 第 37 行.
+NOTIC: [8] Undefined variable: data D:\WWW\xiaojian\frame\App\Api\Common\ApiServiceController.class.php 第 38 行.
+NOTIC: [8] Undefined variable: data D:\WWW\xiaojian\frame\App\Api\Common\ApiServiceController.class.php 第 42 行.
+
+[ 2017-02-05T15:57:33+08:00 ] 127.0.0.1 /api/rsa/index
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+NOTIC: [2048] Declaration of Api\Common\ApiServiceController::success() should be compatible with Think\Controller::success($message = '', $jumpUrl = '', $ajax = false) D:\WWW\xiaojian\frame\App\Api\Common\ApiServiceController.class.php 第 99 行.
+INFO: [ action_begin ] --START--
+SQL: SHOW COLUMNS FROM `gms_hooks` [ RunTime:0.0030s ]
+SQL: SELECT `name`,`addons` FROM `gms_hooks`  [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `gms_addons` [ RunTime:0.0030s ]
+SQL: SELECT `id`,`name` FROM `gms_addons` WHERE `disabled` = 1 AND `name` IN ('SiteStat')  [ RunTime:0.0000s ]
+INFO: Run Common\Behavior\InitHookBehavior [ RunTime:0.015001s ]
+INFO: [ action_begin ] --END-- [ RunTime:0.015001s ]
+
+[ 2017-02-05T15:58:03+08:00 ] 127.0.0.1 /api/rsa/index
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+NOTIC: [2048] Declaration of Api\Common\ApiServiceController::success() should be compatible with Think\Controller::success($message = '', $jumpUrl = '', $ajax = false) D:\WWW\xiaojian\frame\App\Api\Common\ApiServiceController.class.php 第 99 行.
+INFO: [ action_begin ] --START--
+SQL: SHOW COLUMNS FROM `gms_hooks` [ RunTime:0.0030s ]
+SQL: SELECT `name`,`addons` FROM `gms_hooks`  [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `gms_addons` [ RunTime:0.0030s ]
+SQL: SELECT `id`,`name` FROM `gms_addons` WHERE `disabled` = 1 AND `name` IN ('SiteStat')  [ RunTime:0.0000s ]
+INFO: Run Common\Behavior\InitHookBehavior [ RunTime:0.015001s ]
+INFO: [ action_begin ] --END-- [ RunTime:0.015001s ]
+

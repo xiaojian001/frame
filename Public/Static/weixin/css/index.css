@@ -1,0 +1,431 @@
+/*全局变量*/
+body,p,div,h1,h2,h3,h4,ui,ol,li,span{padding: 0;margin: 0;}
+li{
+    list-style: none;
+}
+body{
+    background-color: #f4f4f4;
+}
+
+
+/*首页*/
+#wrap{
+    width: 100%;
+    margin-bottom: 100px;
+}
+.img-block{
+    text-align: center;
+    padding: 30px 0;
+    width:100%;
+    height:15em;
+    background: -ms-linear-gradient(top, #f14742,  #fe9204);        /* IE 10 */
+    background:-moz-linear-gradient(top,#f14742,#fe9204);/*火狐*/
+    background:-webkit-gradient(linear, 0% 0%, 0% 100%,from(#f14742), to(#fe9204));/*谷歌*/
+    background: -webkit-gradient(linear, 0% 0%, 0% 100%, from(#f14742), to(#fe9204));      /* Safari 4-5, Chrome 1-9*/
+    background: -webkit-linear-gradient(top, #f14742, #fe9204);   /*Safari5.1 Chrome 10+*/
+    background: -o-linear-gradient(top, #f14742, #fe9204);  /*Opera 11.10+*/
+}
+.img-block .img-box{
+    text-align: center;
+    display: inline-block;
+    width: 5em;
+    height: 5em;
+    border-radius: 50%;
+    background: #edeeef;
+}
+.img-block .img-box img{
+    text-align: center;
+    display: inline-block;
+    width: 5em;
+    height: 5em;
+    border-radius: 50%;
+    border: #fff 2px solid;
+}
+.img-block li{
+    line-height: 2.5;
+    color: #fff;
+    font-size: 0.8rem;
+    font-family: 微软雅黑;
+}
+.re-btn span{
+    padding: 5px 10px;
+    background-color: #f37b1d;
+    border-radius: 20px;
+    font-size: 0.8rem;
+}
+.com-profile{
+    margin-top: 15px;
+}
+.com-profile a{
+    background-color: #ffea6b;
+    padding: 10px 30px;
+    border-radius: 24px;
+    color: #a27f00;
+    font-family: 微软雅黑;
+}
+.interest-block{
+    margin: 20px;
+}
+.left-box{
+    width: 40%;
+}
+.total-interest{
+    text-align: center;
+    background-color: #fe835a;
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+}
+.total-interest li{
+    padding-top: 20px;
+}
+.total-interest span{
+
+    display: block;
+    color: #fff;
+    font-family: 微软雅黑;
+}
+.right-box{
+    width: 60%;
+}
+.right-box ul li{
+    line-height: 3.0;
+    border-bottom: #afafaf 1px solid;
+}
+.yesterday{
+    color: #44b879;
+}
+.today{
+    color: #d33d56;
+}
+.month-money{
+    padding: 12px 0;
+    height: 50px;
+    margin: 20px 0;
+    border-bottom: #afafaf 1px solid;
+    border-top: #afafaf 1px solid;
+}
+.month-money ul li{
+    font-family: 微软雅黑;
+    font-size: 0.8rem;
+    border-right:#afafaf 1px solid ;
+    text-align: center;
+    float: left;
+    width: 49%;
+}
+.month-money ul li span{
+    display: block;
+}
+.total-share-money li{
+    text-align: center;
+    font-size: 0.8rem;
+    font-family: 微软雅黑;
+}
+.total-share-money li span{
+    display: block;
+}
+/*开户选择*/
+.choose-button-group{
+    padding: 30px 40px;
+}
+.choose-button-group li{
+    margin-bottom: 20px;
+    font-family: 微软雅黑;
+    font-size: 1.0rem;
+    color: #265c98;
+    height:45px;
+    line-height:45px;
+    border: #fb8b0b 2px solid;
+    box-shadow:0 2px 2px #fb8b0b;
+    border-radius: 5px;
+    padding-left: 3rem;
+}
+.choose-button-group li a{
+    vertical-align: top;
+    color: #265c98;
+}
+.icon-01 img{
+    width: 45px;
+    height: 45px;
+    display: inline-block;
+}
+
+.icon-02{
+    width: 45px;
+    height: 45px;
+    display: inline-block;
+}
+.icon-03{
+    width: 45px;
+    height: 45px;
+    display: inline-block;
+}
+/*协议书*/
+.agreen-content{
+    padding: 50px 0 0 20px;
+}
+.agreen-content h1{
+    font-size: 0.8rem;
+    margin-bottom: 15px;
+}
+.agreen-content li{
+    color: #2d5d9b;
+    font-family: 微软雅黑;
+    font-size: 0.8rem;
+}
+.aggreen-btn{
+    text-align: center;
+    margin: 20px 0;
+}
+.aggreen-btn a{
+    background-color: #2dcc70;
+    display: block;
+    height: 45px;
+    line-height: 45px;
+    color: #fff;
+    font-family: 微软雅黑;
+    border-radius: 5px;
+}
+#Account{
+
+}
+.open{
+    transform: translateX(0) translateZ(0);
+    -webkit-transform: translateX(0) translateZ(0);
+}
+.hidden {
+    transform: translateX(100%) translateZ(0);
+    -webkit-transform: translateX(100%) translateZ(0);
+}
+
+/*开户申请*/
+.ac-block{
+
+}
+.ac-block h1{
+    text-align: center;
+    font-size: 1.0rem;
+}
+.ac-from{
+    background-color: #fff;
+    padding: 20px 10px;
+}
+.ac-from ul div{
+    height: 45px;
+    line-height: 45px;
+    font-size: 0.6rem;
+    font-family: 微软雅黑;
+}
+.ac-from ul div label{
+    font-size: 0.6rem;
+    font-family: 微软雅黑;
+    vertical-align: top;
+}
+.ac-input{
+    border: navajowhite;
+    background: inherit;
+    font-size: 0.6rem;
+    height: 30px;
+    width: 60%;
+    display: inline-block;
+}
+.ac-from ul li img{
+    width: 40px;
+    height: 40px;
+}
+.apply-btn{
+    margin:20px 10px;
+}
+#avatar_uplpad_btn img{
+    padding-right: 5px;
+}
+.ul_pics, .ul_pics1, .ul_pics2{
+    display: inline-block;
+}
+.ul_pics li,.ul_pics1 li,.ul_pics2 li{
+    position: relative;
+    float: left;
+    padding-right: 5px;
+}
+.quit{
+    position: absolute;
+    width: 12px;
+    height: 12px;
+    display: inline-block;
+    background: url("../../weixin/img/lic_03.png") center no-repeat;
+    bottom:0px;
+    right:5px;
+}
+.apply-btn span{
+    background-color: #b9b9b8;
+    display: block;
+    height: 45px;
+    line-height: 45px;
+    text-align: center;
+    color: #fff;
+    border-radius: 5px;
+}
+/*我的二维码*/
+.qrcode-block{
+    padding: 20px;
+}
+.qrcode-block li{
+    font-family: 微软雅黑;
+    font-size: 1.0rem;
+
+}
+.qrcode-block li img{
+    vertical-align: middle;
+    width:70px;
+}
+.qrcode-block img{
+    text-align: center;
+}
+.my-qrcode{
+    text-align: center;
+    margin: 50px 0;
+}
+.my-qrcode img{
+    width:60%;
+}
+.my-qrcode li{
+    padding-top: 5px;
+    font-family: 微软雅黑;
+    font-size: 0.8rem;
+}
+
+/*注册*/
+.reg-title{
+    font-size: 0.8rem;
+    text-align: center;
+    margin: 20px 0;
+}
+.reg-form-block{
+    background: #fff;
+    font-size: 0.8rem;
+    font-family: 微软雅黑;
+    margin: 0 10px 10px 10px;
+    border-radius: 5px;
+}
+.reg-form-block ul li{
+    height: 45px;
+    line-height: 45px;
+    border-bottom: #eaeaea 1px solid;
+    padding: 0 20px;
+}
+.reg-form-block ul li input{
+    border: none;
+    height: 35px;
+    font-size: 0.8rem;
+}
+.reg-btn{
+    text-align: center;
+    background-color: #bab1ac;
+    margin:30px 10px;
+    height: 45px;
+    line-height: 45px;
+    color: #fff;
+    font-family: 微软雅黑;
+}
+.weui_uploader_input_wrp {
+    /* float: left; */
+    position: relative;
+    margin-right: 9px;
+    margin-bottom: 9px;
+    width: 35px;
+    height: 35px;
+    border: 1px solid #d9d9d9;
+    border-radius: 5px;
+}
+.weui_uploader_input_wrp:before {
+    width: 2px;
+    height: 20.5px;
+}
+.weui_uploader_input_wrp:after {
+    width: 20.5px;
+    height: 2px;
+}
+
+.close-popup{
+    position: absolute;
+    text-align: center;
+    right: 10px;
+    top: 10px;
+}
+.close-popup span{
+    height: 25px;
+    width: 25px;
+    border: green 1px solid;
+    border-radius: 50%;
+    color: green;
+    font-family: 微软雅黑;
+    font-size: 0.8rem;
+    /* border-radius: 3px; */
+    display: inline-block;
+}
+.xyContent{
+    padding: 20px 10px;
+    line-height: 1.5;
+}
+.xyContent h1{
+    text-align: center;
+    font-size: 0.8rem;
+    margin-bottom: 10px;
+    color: #444;
+}
+.xyContent p{
+    font-size: 0.7rem;
+    line-height: 2.0;
+    color: #555555;
+    font-family: 微软雅黑;
+}
+.tab-img{
+    width: 25px;
+    height: 25px;
+    display: inline-block;
+    background: url("../../weixin/img/iocn.png");
+}
+.icon-mall{
+    background-position: -25px 0;
+}
+.icon-yours{
+    background-position: -52px 0;
+}
+.icon-me{
+    background-position: -80px 0;
+}
+.weui_bar_item_on .tab-img{
+    width: 25px;
+    height: 25px;
+    display: inline-block;
+    background: url("../../weixin/img/icon-link.png");
+}
+.weui_bar_item_on .icon-mall{
+    background-position: -25px 0;
+}
+.weui_bar_item_on .icon-yours{
+    background-position: -52px 0;
+}
+.weui_bar_item_on .icon-me{
+    background-position: -80px 0;
+}
+#tabs_nav a{
+    display: block;
+    -webkit-box-flex: 1;
+    -webkit-flex: 1;
+    flex: 1;
+    padding: 7px 0 0;
+    -webkit-tap-highlight-color: transparent;
+}
+
+.weui_bar_item_on{
+    display: block;
+    -webkit-box-flex: 1;
+    -webkit-flex: 1;
+    flex: 1;
+    padding: 7px 0 0;
+    -webkit-tap-highlight-color: transparent;
+}
+.weui_bar_item_on p{
+    color: #09bb07;
+}

@@ -1,0 +1,39 @@
+<extend name="Public/base"/><block name="body"><div class="fixed-bar" id="AuthGroup_Bar">
+	<div class="item-title">
+		<h3>用户组</h3>
+		<ul class="tab-base">
+			<if condition="Is_Auth('Admin/MemberGroup/index')">
+			<li><a href="{:U('Admin/MemberGroup/index')}"><span>列表</span></a></li>
+			</if>
+			<if condition="Is_Auth('Admin/MemberGroup/add')">
+			<li><a href="{:U('Admin/MemberGroup/add')}"><span>新增</span></a></li>
+			</if>
+			<li><a class="current" href="#"><span>更新</span></a></li>
+		</ul>
+	</div>
+</div>
+<form id="AuthGroup_Form" method="post">
+<table class="table tb-type2 nobdb">
+	<tbody>
+	<tr>
+			<td colspan="2" class="required"><label for="for_name">用户组标题:</label></td>
+		</tr>
+		<tr class="noborder">
+			<td class="vatop rowform"><input name="name" type="text" class="easyui-textbox" style="height:30px;" value="{$_info["name"]}" data-options="required:false"></td>
+			<td class="vatop tips"></td>
+		</tr><tr>
+			<td colspan="2" class="required"><label for="for_name">分成比例:</label></td>
+		</tr>
+		<tr class="noborder">
+			<td class="vatop rowform">
+				<input name="point" type="text" value="{$_info["point"]}" class="easyui-numberbox" style="height:30px;" max="99" value="" data-options="suffix:'%',precision:'2',required:false"></td>
+<td class="vatop tips"></td>
+		</tr>	</tbody>
+	<tfoot>
+		<tr class="tfoot">
+			<td colspan="2"><a class="easyui-linkbutton" href="JavaScript:void(0);" onclick="$('#AuthGroup_Form').submit();" data-options="iconCls:'iconfont icon-edit'"><span style="font-size: 14px; font-weight: 600;">提交</span></a></td>
+		</tr>
+	 </tfoot>
+</table>
+<input name="id" type="hidden" value="{:I('get.id')}" />
+</form></block>

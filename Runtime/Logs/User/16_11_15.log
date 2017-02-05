@@ -1,0 +1,33 @@
+[ 2016-11-15T17:52:22+08:00 ] 127.0.0.1 /user/fetcher/test
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001001s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+INFO: [ action_begin ] --START--
+SQL: SHOW COLUMNS FROM `gms_hooks` [ RunTime:0.0130s ]
+SQL: SELECT `name`,`addons` FROM `gms_hooks`  [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `gms_addons` [ RunTime:0.0050s ]
+SQL: SELECT `id`,`name` FROM `gms_addons` WHERE `disabled` = 1 AND `name` IN ('SiteStat')  [ RunTime:0.0020s ]
+INFO: Run Common\Behavior\InitHookBehavior [ RunTime:0.051003s ]
+INFO: [ action_begin ] --END-- [ RunTime:0.051003s ]
+
+[ 2016-11-15T17:53:21+08:00 ] 127.0.0.1 /user/fetcher/test
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+INFO: [ action_begin ] --START--
+SQL: SHOW COLUMNS FROM `gms_hooks` [ RunTime:0.0020s ]
+SQL: SELECT `name`,`addons` FROM `gms_hooks`  [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `gms_addons` [ RunTime:0.0030s ]
+SQL: SELECT `id`,`name` FROM `gms_addons` WHERE `disabled` = 1 AND `name` IN ('SiteStat')  [ RunTime:0.0000s ]
+INFO: Run Common\Behavior\InitHookBehavior [ RunTime:0.016001s ]
+INFO: [ action_begin ] --END-- [ RunTime:0.016001s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.002000s ]
+

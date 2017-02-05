@@ -1,0 +1,61 @@
+<extend name="Public/base"/><block name="body"><div class="fixed-bar" id="ActionLog_Bar">
+    <div class="item-title">
+        <h3>司机资料审核</h3>
+        <ul class="tab-base">
+            <if condition="Is_Auth('Admin/WebTpl/index')">
+                <li><a href="{:U('Admin/WebTpl/index')}"><span>列表</span></a></li>
+            </if>
+            <li><a class="current" href="#"><span>查看</span></a></li>
+        </ul>
+    </div>
+</div>
+    <form id="User_Form" method="post">
+        <input type="hidden" value="{$info.id}" name="id">
+    <table class="table tb-type2 nobdb">
+        <tbody>
+        <tr>
+            <td colspan="2" class="required"><label for="for_name">交易所:</label></td>
+        </tr>
+        <tr class="noborder">
+            <td class="vatop rowform">
+                <input class="easyui-combobox" name="h_id" value="{$info.h_id}"
+                       data-options="valueField:'id',textField:'name',url:'Admin/Bourse/ajaxComco'" />
+            </td>
+            <td class="vatop tips"></td>
+        </tr>
+        <tr>
+            <td colspan="2" class="required"><label for="for_name">协议名称:</label></td>
+        </tr>
+        <tr class="noborder">
+            <td class="vatop rowform">
+                <input name="title" type="text" class="easyui-textbox" value='{$info.title}' style="height:30px;" data-options="required:false">
+            </td>
+            <td class="vatop tips"></td>
+        </tr>
+        <tr>
+            <td colspan="2" class="required"><label for="for_name">内容:</label></td>
+        </tr>
+        <tr class="noborder">
+            <td class="vatop rowform">
+                <textarea  id="content" name="content" style="width:1000px;height:240px;" >{$info.content}</textarea>
+            </td>
+            <td class="vatop tips"></td>
+        </tr>
+        </tbody>
+        <tfoot>
+        <tr class="tfoot">
+            <td colspan="2"><a class="easyui-linkbutton" href="JavaScript:void(0);" onclick="$('#User_Form').submit();" data-options="iconCls:'iconfont icon-edit'"><span style="font-size: 14px; font-weight: 600;">提交</span></a></td>
+        </tr>
+        </tfoot>
+    </table>
+    </form>
+
+    <link href="__STATIC__/umeditor/themes/default/css/umeditor.css" type="text/css" rel="stylesheet">
+    <script type="text/javascript" charset="utf-8" src="__STATIC__/umeditor/umeditor.config.js"></script>
+    <script type="text/javascript" charset="utf-8" src="__STATIC__/umeditor/umeditor.min.js"></script>
+    <script type="text/javascript" src="__STATIC__/umeditor/lang/zh-cn/zh-cn.js"></script>
+    <script type="text/javascript">
+        //实例化编辑器
+        var um = UM.getEditor('content');
+    </script>
+</block>

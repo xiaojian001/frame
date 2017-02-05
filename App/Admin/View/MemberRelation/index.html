@@ -1,0 +1,37 @@
+<extend name="Public/base"/><block name="body"><div class="fixed-bar" id="AuthRule_Bar">
+	<div class="item-title">
+		<h3>菜单</h3>
+		<ul class="tab-base">
+			<li><a class="current" href="JavaScript:void(0);" onclick="Data_Reload('AuthRule_Data_List');"><span>列表</span></a></li>
+			<if condition="Is_Auth('Admin/MemberRelation/add')">
+			<li><a href="{:U('Admin/MemberRelation/add')}"><span>新增</span></a></li>
+			</if>
+		</ul>
+	</div>
+</div>
+<table id="AuthRule_Data_List"></table>
+<style>
+.tree-icon{ display:none}
+</style>
+<script type="text/javascript">
+$(function() {
+	$("#AuthRule_Data_List").treegrid({
+		url : "{:U('MemberRelation/index')}",
+		fit : true,
+		striped : true,
+		border : false,
+		idField:'member_id',
+		treeField:'nickname',
+		pagination : false,
+		toolbar : '#AuthRule_Bar',
+		singleSelect : true,
+		columns : [[
+            {field : 'member_id',title : 'ID',width : 40,sortable:true},
+			{field : "nickname",title : "实名",width :220,sortable:true},
+			{field : "father_nickname",title : "父级名",width :220,sortable:true},
+			{field : "grandpa_nickname",title : "祖父级名",width :220,sortable:true},
+			{field : "tree_nickname",title : "顶级名",width :220,sortable:true}
+		]]
+	});
+})
+</script></block>

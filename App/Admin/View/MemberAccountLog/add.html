@@ -1,0 +1,100 @@
+<extend name="Public/base"/>
+<block name="body">
+  <div class="fixed-bar" id="User_Bar">
+    <div class="item-title">
+      <h3>用户</h3>
+      <ul class="tab-base">
+        <if condition="Is_Auth('Admin/Member/index')">
+          <li><a href="{:U('Admin/Member/index')}"><span>列表</span></a></li>
+        </if>
+        <li><a class="current"href="{:U('Admin/Member/add')}"><span>新增</span></a></li>
+      </ul>
+    </div>
+  </div>
+  <form id="User_Form" method="post">
+    <table class="table tb-type2 nobdb">
+      <tbody>
+        <tr>
+          <td colspan="2" class="required"><label for="for_name">昵称/姓名:</label></td>
+        </tr>
+        <tr class="noborder">
+          <td class="vatop rowform"><input name="nickname" type="text" class="easyui-textbox" style="height:30px;" value="" data-options="required:true"></td>
+          <td class="vatop tips"></td>
+        </tr>
+        <tr>
+          <td colspan="2" class="required"><label for="for_name">密码:</label></td>
+        </tr>
+        <tr class="noborder">
+          <td class="vatop rowform"><input name="password" type="text" class="easyui-textbox" style="height:30px;" value="" data-options="required:true"></td>
+          <td class="vatop tips"></td>
+        </tr>
+        <tr>
+          <td colspan="2" class="required"><label for="for_name">电话:</label></td>
+        </tr>
+        <tr class="noborder">
+          <td class="vatop rowform"><input name="phone" type="text" class="easyui-textbox" style="height:30px;" value="" data-options="required:true"></td>
+          <td class="vatop tips"></td>
+        </tr>
+        <tr>
+          <td colspan="2" class="required"><label for="for_name">性别:</label></td>
+        </tr>
+        <tr class="noborder">
+          <td class="vatop rowform"><select name="sex" class="easyui-combobox" style="height:30px;" data-options="
+		valueField: 'value',
+		textField: 'text',
+		data: [{
+			text: '男',
+			value: '0'
+		},{
+			text: '女',
+			value: '1'
+		}]" >
+            </select></td>
+          <td class="vatop tips"></td>
+        </tr>
+        <tr>
+          <td colspan="2" class="required"><label for="for_name">状态:</label></td>
+        </tr>
+        <tr class="noborder">
+          <td class="vatop rowform"><select name="status" class="easyui-combobox" style="height:30px;" data-options="
+		valueField: 'value',
+		textField: 'text',
+		data: [{
+			text: '审核中',
+			value: '0'
+		},{
+			text: '已激活',
+			value: '1'
+		},{
+			text: '注销',
+			value: '2'
+		}]" >
+            </select></td>
+          <td class="vatop tips"></td>
+        </tr>
+        <tr>
+          <td colspan="2" class="required"><label for="for_name">客户类型:</label></td>
+        </tr>
+        <tr class="noborder">
+          <td class="vatop rowform"><select name="member_type" class="easyui-combobox" style="height:30px;" data-options="
+		valueField: 'value',
+		textField: 'text',
+		data: [{
+			text: '乘客',
+			value: '0'
+		},{
+			text: '车主',
+			value: '1'
+		}]" >
+          </select></td>
+          <td class="vatop tips"></td>
+        </tr>
+      </tbody>
+      <tfoot>
+        <tr class="tfoot">
+          <td colspan="2"><a class="easyui-linkbutton" href="JavaScript:void(0);" onclick="$('#User_Form').submit();" data-options="iconCls:'iconfont icon-edit'"><span style="font-size: 14px; font-weight: 600;">提交</span></a></td>
+        </tr>
+      </tfoot>
+    </table>
+  </form>
+</block>

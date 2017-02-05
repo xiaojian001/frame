@@ -1,0 +1,122 @@
+<extend name="Public/base"/><block name="body"><div class="fixed-bar" id="ActionLog_Bar">
+    <div class="item-title">
+        <h3>司机资料审核</h3>
+        <ul class="tab-base">
+            <if condition="Is_Auth('Admin/MemberHourseApply/index')">
+                <li><a href="{:U('Admin/MemberHourseApply/index')}"><span>列表</span></a></li>
+            </if>
+            <li><a class="current" href="#"><span>查看</span></a></li>
+        </ul>
+    </div>
+</div>
+    <form id="User_Form" method="post">
+        <input type="hidden" value="{$info.h_id}" name="id">
+    <table class="table tb-type2 nobdb">
+        <tbody>
+        <tr>
+            <td colspan="2" class="required"><label for="for_name">交易所编号:</label></td>
+        </tr>
+        <tr class="noborder">
+            <td class="vatop rowform">
+                <input class="easyui-combobox" name="bourse_id" value="{$info.bourse_id}"
+                                             data-options="valueField:'id',textField:'name',url:'Admin/Bourse/ajaxComco'" />
+            </td>
+            <td class="vatop tips"></td>
+        </tr>
+        <tr>
+            <td colspan="2" class="required"><label for="for_name">交易所账号:</label></td>
+        </tr>
+        <tr class="noborder">
+            <td class="vatop rowform"><input name="name" type="text" class="easyui-textbox" style="height:30px;" data-options="value:'{$_info["account"]}',required:false"></td>
+            <td class="vatop tips"></td>
+        </tr>
+        <tr>
+            <td colspan="2" class="required"><label for="for_name">账号密码:</label></td>
+        </tr>
+        <tr class="noborder">
+            <td class="vatop rowform"><input name="name" type="text" class="easyui-textbox" style="height:30px;" data-options="value:'{$_info["passwd"]}',required:false"></td>
+            <td class="vatop tips"></td>
+        </tr>
+        <tr>
+            <td colspan="2" class="required"><label for="for_name">客户用户名:</label></td>
+        </tr>
+        <tr class="noborder">
+            <td class="vatop rowform">{$info.h_real_name}</td>
+            <td class="vatop tips"></td>
+        </tr><tr>
+            <td colspan="2" class="required"><label for="for_name">开户手机号码:</label></td>
+        </tr>
+        <tr class="noborder">
+            <td class="vatop rowform">{$info.h_phone}</td>
+            <td class="vatop tips"></td>
+        </tr>
+        <tr>
+            <td colspan="2" class="required"><label for="for_name">开户银行:</label></td>
+        </tr>
+        <tr class="noborder">
+            <td class="vatop rowform">{$info.bank_name}</td>
+            <td class="vatop tips"></td>
+        </tr>
+        <tr>
+            <td colspan="2" class="required"><label for="for_name">开户银行卡号:</label></td>
+        </tr>
+        <tr class="noborder">
+            <td class="vatop rowform">{$info.bank_number}</td>
+            <td class="vatop tips"></td>
+        </tr>
+        <tr>
+            <td colspan="2" class="required"><label for="for_name">银行卡图片:</label></td>
+        </tr>
+        <tr class="noborder">
+            <td class="vatop rowform"><img src="{$info.bank_img}"  width="100px;"/></td>
+            <td class="vatop tips"></td>
+        </tr>
+        <tr>
+            <td colspan="2" class="required"><label for="for_name">身份证号码:</label></td>
+        </tr>
+        <tr class="noborder">
+            <td class="vatop rowform">{$info.id_card}</td>
+            <td class="vatop tips"></td>
+        </tr>
+        <tr>
+            <td colspan="2" class="required"><label for="for_name">身份证图片:</label></td>
+        </tr>
+        <tr class="noborder">
+            <td class="vatop rowform"><img src="{$info.id_card_img}"  width="100px;"/></td>
+            <td class="vatop tips"></td>
+        </tr>
+        <tr>
+            <td colspan="2" class="required"><label for="for_name">手持身份证图片:</label></td>
+        </tr>
+        <tr class="noborder">
+            <td class="vatop rowform"><img src="{$info.member_id_card}"  width="100px;"/></td>
+            <td class="vatop tips"></td>
+        </tr>
+        <tr>
+            <td colspan="2" class="required"><label for="for_name">审核:</label></td>
+        </tr>
+        <tr class="noborder">
+            <td class="vatop rowform">
+                <select name="h_status" class="easyui-combobox" style="height:30px;" data-options="
+            value:'{$info.h_status}',
+		valueField: 'value',
+		textField: 'text',
+		data: [{
+			text: '审核成功',
+			value: '1'
+		},{
+			text: '审核失败',
+			value: '2'
+		}]" >
+            </select></td>
+            <td class="vatop tips"></td>
+        </tr>
+        </tbody>
+        <tfoot>
+        <tr class="tfoot">
+            <td colspan="2"><a class="easyui-linkbutton" href="JavaScript:void(0);" onclick="$('#User_Form').submit();" data-options="iconCls:'iconfont icon-edit'"><span style="font-size: 14px; font-weight: 600;">提交</span></a></td>
+        </tr>
+        </tfoot>
+    </table>
+    </form>
+</block>
